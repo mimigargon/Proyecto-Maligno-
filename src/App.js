@@ -14,7 +14,7 @@ function App() {
     <div class="chat-sent">
       <div class='message message-outgoing'>
         <div class="message-avatar ui-box">V</div>
-        <div class="message-text ui-box">La web de maligno</div>
+        <div class="message-text ui-box">La web de maligno.</div>
       </div>
       <div class='message message-incoming'>
         <div class="message-text ui-box">A test of what?</div>
