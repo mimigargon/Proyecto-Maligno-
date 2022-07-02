@@ -4,12 +4,12 @@ import Main from './Components/Main/Main';
 
 function App() {
   return (
-   
-     <div>
+   <div>
      <p>pagina principal</p>
      <Main/>
      </div>
-      
+
   );
 } 
+
 export default App;
