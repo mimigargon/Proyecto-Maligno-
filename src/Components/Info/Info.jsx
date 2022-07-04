@@ -8,11 +8,16 @@ function Info() {
     <div className="info-container">
       <p>Lorem ipsum....</p>
       
-      {useTimeout(() => {
         <Link to={"/main"}>
-        <button className="info-btn" value="CONTINUE TO GAME"/>
-        </Link>
+      {useTimeout(() => {
+        const button = document.createElement('button'); 
+        button.type = 'button'; 
+        button.innerText = 'CONTINUE TO GAME';
+        button.classList.add('info-btn');
+        document.body.appendChild(button); 
+       
     }, 5000)}
+        </Link>
       
       
       {console.log("setTimeout() Ejemplo...")}
