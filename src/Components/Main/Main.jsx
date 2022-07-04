@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import "./Main.scss";
 
 const Main = () => {
   return (
@@ -39,7 +40,6 @@ const Main = () => {
     <div class="chat-textbox">
       <textarea class="chat-textarea ui-box crt">
       </textarea>
-      <a class="btn chat-send-btn ui-box"><span class="fa fa-angle-right"></span></a>
     </div>
   </div>
   <div class="cube ui-box">
@@ -48,4 +48,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default Main;
