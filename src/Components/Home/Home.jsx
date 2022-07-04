@@ -1,13 +1,13 @@
 import React from 'react'
-import { Navigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
     <>
       <h1>MALGINO RETURNS</h1>
       <div className="buttons-container">
-        <button className='start-btn' onClick={() => Navigate("/gameinfo")}>START</button>
-        <button className='login-btn' onClick={() => Navigate("/login")}>LOGIN</button>
+        <Link to={"/game-info"}><button className='start-btn'>START</button></Link>
+        <Link to={"/login"}><button className='login-btn'>LOGIN</button></Link>
       </div>
     </>
   )

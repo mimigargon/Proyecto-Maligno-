@@ -1,18 +1,21 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import useTimeout from "../../useTimeOut";
 
 function Info() {
+   
   return (
     <div className="info-container">
       <p>Lorem ipsum....</p>
-      {setTimeout(
-        () => (
-          <button className="info-btn" onClick={() => Navigate("/main")}>
-            CONTINUE TO GAME
-          </button>
-        ),
-        5000
-      )}
+      
+      {useTimeout(() => {
+        <Link to={"/main"}>
+        <button className="info-btn" value="CONTINUE TO GAME"/>
+        </Link>
+    }, 5000)}
+      
+      
+      {console.log("setTimeout() Ejemplo...")}
     </div>
   );
 }
