@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./Main.scss";
 
 const Main = () => {
@@ -43,6 +44,7 @@ const Main = () => {
     </div>
   </div>
   <div className="cube ui-box">
+  <Link to="/main">Main</Link>
   </div>
 </div>
   )
