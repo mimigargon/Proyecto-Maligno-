@@ -13,6 +13,10 @@ const Weapons = () => {
     const light = document.querySelector('.light');
     light.style.background = `radial-gradient(circle at ${x}px ${y}px, transparent 0%, #000 15%)`;
   });
+  window.onbeforeunload = function() {
+    var message = 'Do you want to leave this page?';
+    return message;
+}
   return (
     <div className='light'>
     <div className='diskContainer'>
