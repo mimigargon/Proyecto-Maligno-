@@ -1,0 +1,67 @@
+div {
+    margin-top: 129px;
+}
+
+.info-container {
+    display: flex;
+    border: solid 3px #ff4d4d;
+    animation: boxShadow 1.6s infinite;
+    padding-bottom: 13px;
+    padding-left: 25px;
+    margin-right: 188px;
+    margin-left: 188px;
+    margin-top: 50px;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-family: monospace;
+    font-size: 15px;
+    color: #ff4d4d;
+    animation: textShadow 1.6s infinite;
+
+    p {
+        margin-right: 10px;
+        border-right: .15em solid #b996a2;
+        animation: blink 1s steps(1) infinite;
+        width: 0;
+        overflow: hidden;
+        white-space: normal;
+        animation: typing 8s steps(100) 1s 1 normal both, blink 1s steps(1) infinite;
+        
+    }
+
+
+
+}
+
+a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: #ff4d4d;
+    font-family: monospace;
+    font-size: 25px;
+    margin-top: 50px;
+    animation: textShadow 1.6s infinite;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 1000%;
+    }
+  }

@@ -1,0 +1,20 @@
+
+
+h1 {
+    font-family: monospace;
+    font-size: 50px;
+    color: #ff4d4d;
+    animation: textShadow 1.6s infinite;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+
+    animation: shake 600ms ease-in-out infinite alternate;
+    text-shadow: 0 0 .07em,
+        -.2em 0 2em,
+        .2em 0 2em;
+    user-select: none;
+
+}
