@@ -1,14 +1,22 @@
 import React from 'react';
 import "./Weapons.scss";
-//Foto de background con armas y un icono flotante de ¿una pistola de agua?
+import disk from "../../../images/harddisk.png";
+import Magnifier from "react-magnifier";
+
 
 
 
 const Weapons = () => {
+  document.addEventListener('mousemove', (e) => {
+    const x = e.clientX;
+    const y = e.clientY;
+    const light = document.querySelector('.light');
+    light.style.background = `radial-gradient(circle at ${x}px ${y}px, transparent 0%, #000 15%)`;
+  });
   return (
-    <div className='weaponsContainer'>
-    <p>weapons</p>
-    <div className='weapons'>
+    <div className='light'>
+    <div className='diskContainer'>
+    <Magnifier className='disk' src={disk} width={200}/>
     </div>
     </div>
   )
