@@ -47,10 +47,11 @@ const Drugs = () => {
 		<div class="transactionDetails">
         {drugs.map((drug) => {
           return (
-            <div className="drugs" key={drug}>           
+            <div className="drugs" key={drug}>    
 			<div class="detail"><b>nombre :</b> {drug.nombre}</div>
 			<div class="detail"> <b>precio :</b> {drug.tipoProblemaSuministro} ETH</div>
-			<div class="detail"> <b>stock :</b> {drug.ffin} uds</div>     
+			<div class="detail"> <b>stock :</b> {drug.ffin} uds</div>    
+            <hr/>     
             </div>
           );
         })}   
@@ -95,7 +96,7 @@ const Drugs = () => {
 		</div>
 		<div class="receiptBarcode">
 			<div class="barcode">
-				HelloCVSScript
+            <img src="https://www.cognex.com/BarcodeGenerator/Content/images/isbn.png"></img>
 			</div>
 			2003 0998 9000 8730 21
 		</div>
@@ -148,7 +149,7 @@ const Drugs = () => {
 					</div>
 				</div>
 				<div class="barcode">
-					HelloCVSMate1
+					<img src="https://www.cognex.com/BarcodeGenerator/Content/images/isbn.png"></img>
 				</div>
 				<div class="barcodeID center">
 					9007 9876 9087 7665 62
@@ -176,28 +177,3 @@ const Drugs = () => {
 export default Drugs;
 
 
-/*
- <>
-      <h1>drugs</h1>
-      <div className="character__container">
-        {drugs.map((drug) => {
-          return (
-            <div className="character" key={drug}>
-           
-              <p>
-               nombre: {drug.nombre}
-              </p>
-              <p>
-               precio: {drug.tipoProblemaSuministro} ETH
-              </p>
-              <p>
-               stock: {drug.ffin} uds
-              </p>
-        
-            </div>
-          );
-        })}
-      </div>
-      
-    </>
-*/
