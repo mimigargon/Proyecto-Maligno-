@@ -6,23 +6,7 @@ function Info() {
   return (
     <>
       
-      <section>
-        <div className="container">
-          <div className="box">
-            <div className="p">El contenido de este juego es una simulación.</div>
-            <div className="p">
-              El objetivo es meramente educativo y de entretenimiento. En ningún
-              caso se ha utilizado contenido real o con fines lucrativos.
-            </div>
-            <div className="p">Este juego está recomendado para mayores de edad.</div>
-          </div>
-          <div>
-            <div>
-              <div className="title">¡ATENCIÓN!</div>
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
 
 

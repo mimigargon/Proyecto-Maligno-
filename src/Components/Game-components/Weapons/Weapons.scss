@@ -24,18 +24,18 @@
     box-sizing: border-box;
   }
   
-  body {
+/*   body {
     position: relative;
     height: 100vh;
     background-color: #fff;
     cursor: url('../../../images/linternacursor.png'), auto;
-    background-image: url("../../../../../maligno-front/src/images/cyberweapons.png");
+    background-image: url("../../../../src/images/cyberweapons.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
-  }
+  } */
   
-  .light {
+/*   .light {
     position: absolute;
     top: 0;
     right: 0;
@@ -45,7 +45,7 @@
     background: radial-gradient(circle at 50% 50%, transparent 0%, #000 30%);
     display: flex;
     justify-content: space-around;
-}
+} */
 
 .diskContainer{
     margin-top: 750px;

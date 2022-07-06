@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import "./Main.scss";
 
+
 const Main = () => {
   return (
     <div className="wrapper crt">

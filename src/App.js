@@ -6,6 +6,7 @@ import Info from "./Components/Info/Info";
 import Login from "./Components/Login/Login";
 import "./App.scss";
 import Weapons from "./Components/Game-components/Weapons/Weapons";
+import StolenGoods from "./Components/Game-components/Stolen-goods/Stolen-goods";
 
 function App() {
   return (
@@ -16,9 +17,11 @@ function App() {
         <Route path="/main" element={<Main />} />
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login/>}/>
+        <Route path="/stolen" element={<StolenGoods/>}/>
+        <Route path='/weapons' element={<Weapons/>}/>
       </Routes>
 
-      <Weapons/>
+      
 
     </div>
   );

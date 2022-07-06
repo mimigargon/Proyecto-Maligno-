@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 import "./Weapons.scss";
 import disk from "../../../images/harddisk.png";
 import Magnifier from "react-magnifier";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
+import styled from "styled-components";
 /* import computer from "../../../images/computer.gif"; */
-
 
 //Este componente de armas consiste en una habitación como si fuera de una armería
 //en la que tienes que encontrar la pista con una linterna y la luz apagada.
@@ -17,30 +17,48 @@ import Swal from 'sweetalert2';
   return message;
 } */
 
+const BackgroundWeapon = styled.body`
+  position: relative;
+  height: 100vh;
+  background-color: #fff;
+  cursor: url("../../../images/linternacursor.png"), auto;
+  background-image: url("../../../../src/images/cyberweapons.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+`;
 
 const Weapons = () => {
-  document.addEventListener('mousemove', (e) => {
+  document.addEventListener("mousemove", (e) => {
     const x = e.clientX;
     const y = e.clientY;
-    const light = document.querySelector('.light');
+    const light = document.querySelector(".light");
     light.style.background = `radial-gradient(circle at ${x}px ${y}px, transparent 0%, #000 15%)`;
   });
 
-  const showAlert=()=>{
+  const showAlert = () => {
     Swal.fire({
-      title: '¡Conseguido! has encontrado una contraseña',
-      color: '#ffffff',
-      background: 'url("https://c.tenor.com/-SV9TjUGabMAAAAC/hacker-python.gif") no-repeat',
-    })
-  }
+      title: "¡Conseguido! has encontrado una contraseña",
+      color: "#ffffff",
+      background:
+        'url("https://c.tenor.com/-SV9TjUGabMAAAAC/hacker-python.gif") no-repeat',
+    });
+  };
 
   return (
-    <div className='light'>
-    <div className='diskContainer'>
-    <Magnifier onClick={()=>showAlert()} className='disk' src={disk} width={200}/>
-    </div>
-    </div>
-  )
-}
+    <BackgroundWeapon>
+      <div className="light">
+        <div className="diskContainer">
+          <Magnifier
+            onClick={() => showAlert()}
+            className="disk"
+            src={disk}
+            width={200}
+          />
+        </div>
+      </div>
+    </BackgroundWeapon>
+  );
+};
 
-export default Weapons
+export default Weapons;
