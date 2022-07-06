@@ -19,18 +19,66 @@ div {
     font-family: monospace;
     font-size: 15px;
     color: #ff4d4d;
+    background-color: #00000060;
     animation: textShadow 1.6s infinite;
 
-    p {
-        margin-right: 10px;
-        border-right: .15em solid #b996a2;
-        animation: blink 1s steps(1) infinite;
-        width: 0;
-        overflow: hidden;
-        white-space: normal;
-        animation: typing 8s steps(100) 1s 1 normal both, blink 1s steps(1) infinite;
-        
+    .text-container {
+        display: inline-block;
+        margin-top: 13px;
+        animation: blink 1s infinite;
+        p{
+            animation: typing 6s steps(90, end) forwards;
+        }
+        p.c1 {
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        p.c2 {
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            animation-delay: 7s;
+        }
+
+        p.c3 {
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap; 
+            animation-delay: 13s;
+        }
+
+        p.c4 {
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            animation-delay: 17s;
+        }
+
+        p.c5 {
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap; 
+            animation-delay: 23s;
+        }
+
+        p.c6 {
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            animation-delay: 28s;
+        }
+
+        p.c7 {
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            animation-delay: 30s;
+        }
+
     }
+
 
 
 
@@ -52,9 +100,8 @@ a {
 }
 
 @keyframes blink {
-    50% {
-        border-color: transparent;
-    }
+    from { border-color: #b996a2}
+    to {border-color: transparent}
 }
 
 @keyframes typing {
@@ -62,6 +109,6 @@ a {
       width: 0;
     }
     to {
-      width: 1000%;
+      width: 100%;
     }
   }
