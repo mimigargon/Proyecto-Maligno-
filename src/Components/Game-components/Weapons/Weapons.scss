@@ -24,8 +24,10 @@
     box-sizing: border-box;
   }
   
-  body {
+  @media only screen and (min-width: 1500px){ 
+  .lightContainer {
     position: relative;
+    display:block;
     height: 100vh;
     background-color: #fff;
     cursor: url('../../../images/linternacursor.png'), auto;
@@ -34,7 +36,25 @@
     background-repeat: no-repeat;
     background-position: 50%;
   }
-  
+}
+
+@media only screen and (min-width: 900px){ 
+  .lightContainer {
+    position: relative;
+    display:block;
+    height: 100vh;
+    background-color: #fff;
+    cursor: url('../../../images/linternacursor.png'), auto;
+    background-image: url("../../../../../maligno-front/src/images/cyberweapons.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+}
+
+
+
+@media only screen and (min-width: 1500px){
   .light {
     position: absolute;
     top: 0;
@@ -46,10 +66,36 @@
     display: flex;
     justify-content: space-around;
 }
+}
+  
+@media only screen and (min-width: 900px){
+  .light {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background: radial-gradient(circle at 50% 50%, transparent 0%, #000 30%);
+    display: flex;
+    justify-content: space-around;
+}
+}
 
-.diskContainer{
+
+@media only screen and (min-width: 1500px){
+  .diskContainer{
     margin-top: 750px;
 }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1900px){
+  .diskContainer{
+    margin-top: 450px;
+}
+}
+
+
 
 .disk{
         /* filter: opacity(0%); */

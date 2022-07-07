@@ -28,16 +28,18 @@ const Weapons = () => {
 
   const showAlert=()=>{
     Swal.fire({
-      title: '¡Conseguido! has encontrado una contraseña',
+      title: '¡Conseguido! has encontrado parte de la contraseña',
       color: '#ffffff',
       background: 'url("https://c.tenor.com/-SV9TjUGabMAAAAC/hacker-python.gif") no-repeat',
     })
   }
 
   return (
+    <div className='lightContainer'>
     <div className='light'>
     <div className='diskContainer'>
     <Magnifier onClick={()=>showAlert()} className='disk' src={disk} width={200}/>
+    </div>
     </div>
     </div>
   )

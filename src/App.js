@@ -8,9 +8,9 @@ import Weapons from "./Components/Game-components/Weapons/Weapons";
 
 function App() {
   return (
-    <div>
+    <>
       <Weapons/>
-    </div>
+    </>
   );
 }
 
