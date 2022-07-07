@@ -1,8 +1,22 @@
-import React from 'react'
+import React from 'react';
+import "./Login.scss";
 
 const Login = () => {
   return (
-    <div>https://codepen.io/remsrob/pen/ZRyqNx</div>
+    <div>
+    <h1>LOGIN</h1>
+      <form>
+        <label>
+        <span>USERNAME</span>
+        <input type="text" name="username"></input>
+        </label>
+        <label>
+          <span>PASSWORD</span>
+          <input type="text" name="password"></input>
+        </label>
+        <button type="submit">ACCEDER</button>
+      </form>
+    </div>
   )
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Weapons.scss";
 import disk from "../../../images/harddisk.png";
+
 import sable from "../../../images/sable.png";
 import gun1 from "../../../images/gun1.png";
 import gun2 from "../../../images/gun2.png";
@@ -8,6 +9,7 @@ import gun3 from "../../../images/gun3.png";
 import gun4 from "../../../images/gun4.png";
 import Swal from "sweetalert2";
 import Clue from "../Clue/Clue";
+
 
 //Este componente de armas consiste en una habitación como si fuera de una armería
 //en la que tienes que encontrar la pista con una linterna y la luz apagada.
@@ -30,6 +32,7 @@ const Weapons = () => {
 
   const showAlert = () => {
     Swal.fire({
+
       title: "¡Conseguido! has encontrado parte de la contraseña",
       color: "#ffffff",
       background:
@@ -71,6 +74,7 @@ const Weapons = () => {
   };
 
   return (
+
     <div className="lightContainer">
       <Clue
         onClick={() => showAlert()}
@@ -110,6 +114,7 @@ const Weapons = () => {
       />
       <div className="light"></div>
     </div>
+
   );
 };
 
