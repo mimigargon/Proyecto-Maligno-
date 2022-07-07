@@ -1,0 +1,104 @@
+.info-container {
+    background-color: #1a0000;
+    color: #ff4d4d;
+    font-family: monospace;
+    height: 100vh;
+
+    .text-container {
+        display: inline-block;
+        border: solid 3px #ff4d4d;
+        animation: boxShadow 1.6s infinite;
+        padding-left: 20px;
+        background-color: #00000060;
+        animation: textShadow 1.6s infinite;
+        width: 95%;
+        margin-left: 29px;
+
+        p {
+            font-family: monospace;
+            font-size: 20px;
+            color: #ff4d4d;
+            padding: 15px;
+            animation: typing 6s steps(100, end) forwards;
+
+        }
+
+        p.c1 {
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        p.c2 {
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            animation-delay: 7s;
+        }
+
+        p.c3 {
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            animation-delay: 13s;
+        }
+
+        p.c4 {
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            animation-delay: 17s;
+        }
+
+        p.c5 {
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            animation-delay: 23s;
+        }
+
+        p.c6 {
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            animation-delay: 28s;
+        }
+
+        p.c7 {
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            animation-delay: 30s;
+        }
+
+    }
+
+    a {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        align-content: space-between;
+        flex-wrap: wrap;
+        text-decoration: none;
+        color: #ff4d4d;
+        font-family: monospace;
+        font-size: 40px;
+        margin-top: 50px;
+        animation: textShadow 1.6s infinite;
+    }
+
+}
+
+
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}

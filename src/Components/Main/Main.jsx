@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./Main.scss";
+
 
 const Main = () => {
   return (
@@ -11,38 +13,10 @@ const Main = () => {
         <p> - V</p>
   </div>
   <div className="chat ui-box">
-    <div className="chat-sent">
-      <div className='message message-outgoing'>
-        <div className="message-avatar ui-box">V</div>
-        <div className="message-text ui-box">La web de maligno</div>
-      </div>
-      <div className='message message-incoming'>
-        <div className="message-text ui-box">A test of what?</div>
-        <div className="message-avatar ui-box">M</div>
-      </div>
-      <div className='message message-outgoing'>
-        <div className="message-avatar ui-box">V</div>
-        <div className="message-text ui-box">This is just a test.</div>
-      </div>
-      <div className='message message-incoming'>
-        <div className="message-text ui-box">A test of what?</div>
-        <div className="message-avatar ui-box">M</div>
-      </div>
-      <div className='message message-outgoing'>
-        <div className="message-avatar ui-box">V</div>
-        <div className="message-text ui-box">This is just a test.</div>
-      </div>
-      <div className='message message-incoming'>
-        <div className="message-text ui-box">A test of what?</div>
-        <div className="message-avatar ui-box">M</div>
-      </div>
-    </div>
-    <div className="chat-textbox">
-      <textarea className="chat-textarea ui-box crt">
-      </textarea>
-    </div>
+    <input type="text"></input>
   </div>
   <div className="cube ui-box">
+  <Link to="/main">Main</Link>
   </div>
 </div>
   )
