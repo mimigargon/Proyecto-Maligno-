@@ -32,7 +32,6 @@ const Weapons = () => {
 
   const showAlert = () => {
     Swal.fire({
-
       title: "¡Conseguido! has encontrado parte de la contraseña",
       color: "#ffffff",
       background:
@@ -48,7 +47,7 @@ const Weapons = () => {
   const showAlertError = () => {
     let timerInterval;
     Swal.fire({
-      title: "3RR0R 404. P455W0RD N0T F0UND",
+      title: "3RR0R 404: P455W0RD N0T F0UND",
       color: "#ffffff",
       html: "Esta ventana se autodestruirá en <b></b> milisegundos.",
       timer: 3000,
