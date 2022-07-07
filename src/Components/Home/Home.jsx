@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navigate } from 'react-router-dom'
 
+
 const Home = () => {
   return (
     <>
@@ -9,6 +10,7 @@ const Home = () => {
         <button className='start-btn' onClick={() => Navigate("/gameinfo")}>START</button>
         <button className='login-btn' onClick={() => Navigate("/login")}>LOGIN</button>
       </div>
+     
     </>
   )
 }

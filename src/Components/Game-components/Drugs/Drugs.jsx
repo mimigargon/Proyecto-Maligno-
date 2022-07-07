@@ -48,6 +48,9 @@ const Drugs = () => {
         {drugs.map((drug) => {
           return (
             <div className="drugs" key={drug}>    
+			{
+				console.log("drugsss10 : ",drugs[10])
+			}
 			<div class="detail"><b>nombre :</b> {drug.nombre}</div>
 			<div class="detail"> <b>precio :</b> {drug.tipoProblemaSuministro} ETH</div>
 			<div class="detail"> <b>stock :</b> {drug.ffin} uds</div>    
