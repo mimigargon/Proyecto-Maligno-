@@ -7,7 +7,7 @@ import "./Home.scss";
 const Home = () => {
   return (
     <div className="home-container">
-      <h1 className="home-title">MALIGNO RETURNS</h1>
+      <h1 className="home-title"><div>D</div><div>A</div><div>R</div><div>K</div> <div>W</div><div>3</div><div>B</div><div>5</div></h1>
       <section>
         <div className="container">
           <div className="box">

@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+@font-face {
+    font-family: 'elixia';
+    src: url('https://files.jcink.net/uploads/summertests/fonts/ELIXIA.ttf');
+}
+
 $neon-red: #c02020;
 $light-red: #ff0020;
 
@@ -13,24 +19,28 @@ $spacing-md: 25px;
     color: #ff4d4d;
     font-family: monospace;
     height: 100vh;
+    
 
     .home-title {
-        font-family: monospace;
-        font-size: 90px;
+        font-family: 'elixia';
+        font-size: 151px;
         color: #ff4d4d;
         animation: textShadow 1.6s infinite;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        align-content: center;
-        justify-content: space-around;
+        text-align: center;
         padding-top: 30px;
 
-        animation: shake 600ms ease-in-out infinite alternate;
+        animation: shake 600ms ease-in-out infinite alternate, rotate-letter 4s forwards; 
         text-shadow: 0 0 .07em,
             -.2em 0 2em,
             .2em 0 2em;
         user-select: none;
+        
+
+        div {
+            animation: rotate-letter 7s forwards;
+            font-family: 'elixia';
+            display: inline-block;
+        }
 
     }
 
@@ -59,6 +69,8 @@ $spacing-md: 25px;
         justify-content: center;
         display: flex;
         margin-top: 50px;
+
+
     }
 
     .box {
@@ -83,7 +95,7 @@ $spacing-md: 25px;
         padding: 7px;
         font-weight: bold;
         text-transform: uppercase;
-        text-align: center;
+        text-align: left;
     }
 
     .buttons-container {
@@ -92,6 +104,7 @@ $spacing-md: 25px;
         align-items: center;
         justify-content: center;
         gap: 70px;
+        margin-top: 100px;
     }
 
     .home-btn {
@@ -105,12 +118,22 @@ $spacing-md: 25px;
         color: whitesmoke;
         border-radius: 20px;
         font-size: 20px;
+        cursor: pointer;
+
     }
 
 }
 
 
+@keyframes rotate-letter {
+    from {
+        transform: rotateY(180deg);
+    }
 
+    to {
+        transform: rotateY(0deg);
+    }
+}
 
 @keyframes neon-effect-box {
     from {

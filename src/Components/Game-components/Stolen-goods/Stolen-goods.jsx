@@ -8,10 +8,6 @@ import knife from "../../../images/knife.png";
 import "./Stolen-goods.scss";
 
 function StolenGoods() {
-  const holes = document.querySelectorAll(".hole");
-  const scoreBoard = document.querySelector(".score");
-  const pcs = document.querySelectorAll(".pc");
-  const others = document.querySelectorAll(".other");
   let lastHole;
   let pcOrNot;
   let timeUp = false;
@@ -30,6 +26,7 @@ function StolenGoods() {
     return hole;
   }
   function peep() {
+    const holes = document.querySelectorAll(".hole");
     const time = randomTime(500, 2000);
     const hole = randomHole(holes);
     pcOrNot = Math.floor(Math.random() * 2) + 1;
@@ -40,6 +37,11 @@ function StolenGoods() {
     }, time);
   }
   function startGame() {
+    const pcs = document.querySelectorAll(".pc");
+    const others = document.querySelectorAll(".other");
+    pcs.forEach((pc) => pc.addEventListener("click", bonk));
+    others.forEach((other) => other.addEventListener("click", debonk));
+    const scoreBoard = document.querySelector(".score");
     scoreBoard.textContent = 0;
     timeUp = false;
     score = 0;
@@ -47,19 +49,20 @@ function StolenGoods() {
     setTimeout(() => (timeUp = true), 30000);
   }
   function bonk(e) {
+    const scoreBoard = document.querySelector(".score");
     if (!e.isTrusted) return; // cheater!
     score++;
     this.parentNode.classList.remove("up");
     scoreBoard.textContent = score;
   }
   function debonk(e) {
+    const scoreBoard = document.querySelector(".score");
     if (!e.isTrusted) return; // cheater!
     score--;
     this.parentNode.classList.remove("down");
     scoreBoard.textContent = score;
   }
-  pcs.forEach((pc) => pc.addEventListener("click", bonk));
-  others.forEach((other) => other.addEventListener("click", debonk));
+
   return (
     <div className="container">
       <h1>Whack-a-PC!</h1>
