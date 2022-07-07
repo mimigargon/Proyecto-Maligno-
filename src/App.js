@@ -10,7 +10,7 @@ import StolenGoods from "./Components/Game-components/Stolen-goods/Stolen-goods"
 
 function App() {
   return (
-    <div>
+    <>
 
       <Routes>
         <Route path="/game-info" element={<Info />} />
@@ -23,7 +23,7 @@ function App() {
 
       
 
-    </div>
+    </>
   );
 }
 

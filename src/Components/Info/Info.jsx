@@ -4,12 +4,7 @@ import "./Info.scss";
 
 function Info() {
   return (
-    <>
-      
-    
-
-
-
+    <div className="info-container">
         <div className="text-container">
           <p className="c1">
             Una serie de delitos se han cometido dentro de la Deep Web. El autor
@@ -33,7 +28,7 @@ function Info() {
           <p className="c7">Buena suerte.</p>
         </div>
         
-      <div className="info-container">
+      
         {useTimeout(() => {
           const link = document.createElement("a");
           link.textContent = "CONTINUE TO GAME";
@@ -41,8 +36,8 @@ function Info() {
           link.href = "/main";
           document.body.appendChild(link);
         }, 30000)}
-      </div>
-    </>
+      
+    </div>
   );
 }
 
