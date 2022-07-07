@@ -11,7 +11,7 @@ import StolenGoods from "./Components/Game-components/Stolen-goods/Stolen-goods"
 function App() {
   return (
     <>
-
+      <Weapons/>
       <Routes>
         <Route path="/game-info" element={<Info />} />
         <Route path="/main" element={<Main />} />
@@ -20,9 +20,6 @@ function App() {
         <Route path="/stolen" element={<StolenGoods/>}/>
         <Route path='/weapons' element={<Weapons/>}/>
       </Routes>
-
-      
-
     </>
   );
 }
