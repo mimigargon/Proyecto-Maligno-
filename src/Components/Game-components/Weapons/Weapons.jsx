@@ -1,9 +1,13 @@
 import React from 'react';
 import "./Weapons.scss";
 import disk from "../../../images/harddisk.png";
-import Magnifier from "react-magnifier";
+import sable from "../../../images/sable.png";
+import gun1 from "../../../images/gun1.png";
+import gun2 from "../../../images/gun2.png";
+import gun3 from "../../../images/gun3.png";
+import gun4 from "../../../images/gun4.png";
 import Swal from 'sweetalert2';
-/* import computer from "../../../images/computer.gif"; */
+import Clue from '../Clue/Clue'
 
 
 //Este componente de armas consiste en una habitación como si fuera de una armería
@@ -34,13 +38,42 @@ const Weapons = () => {
     })
   }
 
+  const showAlertError=()=>{
+    let timerInterval
+    Swal.fire({
+  title: '3RR0R 404. P455W0RD N0T F0UND',
+  color: '#ffffff',
+  html: 'Esta ventana se autodestruirá en <b></b> milisegundos.',
+  timer: 3000,
+  background: 'url("https://media.moddb.com/images/articles/1/283/282292/MOSHED-2020-2-20-22-48-16.gif") no-repeat',
+  timerProgressBar: true,
+  didOpen: () => {
+    Swal.showLoading()
+    const b = Swal.getHtmlContainer().querySelector('b')
+    timerInterval = setInterval(() => {
+      b.textContent = Swal.getTimerLeft()
+    }, 100)
+  },
+  willClose: () => {
+    clearInterval(timerInterval)
+  }
+}).then((result) => {
+  /* Read more about handling dismissals below */
+  if (result.dismiss === Swal.DismissReason.timer) {
+    console.log('I was closed by the timer')
+  }
+})
+  }
+
   return (
     <div className='lightContainer'>
-    <div className='light'>
-    <div className='diskContainer'>
-    <Magnifier onClick={()=>showAlert()} className='disk' src={disk} width={200}/>
-    </div>
-    </div>
+    <Clue onClick={()=>showAlert()} className='disk' src={disk} width={200}/>
+    <Clue onClick={()=>showAlertError()} className='sable' src={sable} width={200}/>
+    <Clue onClick={()=>showAlertError()} className='gun1' src={gun1} width={200}/>
+    <Clue onClick={()=>showAlertError()} className='gun2' src={gun2} width={200}/>
+    <Clue onClick={()=>showAlertError()} className='gun3' src={gun3} width={200}/>
+    <Clue onClick={()=>showAlertError()} className='gun4' src={gun4} width={200}/>
+    <div className='light'></div>
     </div>
   )
 }
