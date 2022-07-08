@@ -45,6 +45,7 @@ $spacing-md: 25px;
     }
 
     .container {
+        box-sizing: inherit;
         margin-bottom: 40px;
         padding: $spacing-md;
         border: 7px solid #ff4d4d;
