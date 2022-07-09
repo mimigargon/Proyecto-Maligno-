@@ -1,5 +1,13 @@
 import React from 'react'
 import "./Fake-news.scss";
+import Notepad from '../Notepad/Notepad';
+
+//He cogido como inspiración para este componente de Fake-News un pen de codepen
+//https://codepen.io/fizzypop109/pen/Kjbbjq
+//He descargado también un paquete de iconos de escritorio de windows 95
+//de la siguiente página https://wallpapers-clan.com/app-icons/windows-95/
+//en el que simula la pantalla de un ordenador con el sistema operativo de Windows 95
+//En este componente has de seleccionar la noticia que sea verdadera entre todas las que hay
 
 const FakeNews = () => {
   function updateTime(){
@@ -50,24 +58,24 @@ const FakeNews = () => {
     function dragMouseDown(e) {
       e = e || window.event;
       e.preventDefault();
-      // get the mouse cursor position at startup:
+
       pos3 = e.clientX;
       pos4 = e.clientY;
       document.onmouseup = closeDragElement;
-      // call a function whenever the cursor moves:
+
       document.onmousemove = elementDrag;
     }
   
     function elementDrag(e) {
       e = e || window.event;
       e.preventDefault();
-      // calculate the new cursor position:
+      // para calcular la nueva posición del cursor
       pos1 = pos3 - e.clientX;
       pos2 = pos4 - e.clientY;
       pos3 = e.clientX;
       pos4 = e.clientY;
       
-      // set the element's new position:
+      // para setear la nueva posición 
       elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
       elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
     }
@@ -81,7 +89,7 @@ const FakeNews = () => {
   
     return (
     <>
-    <div className="container">
+    <div className="container-fakeNews">
     <div className="monitor">
     <div className="start">
       <div className="start__button">
@@ -168,12 +176,10 @@ const FakeNews = () => {
        </div>
     </div>
 
-    <div className="computer desktop-icon">
-      <div className="computer__icon desktop-icon__icon">
+    <div className="fakepc desktop-icon">
+      <div className="fakepc__icon desktop-icon__icon">
       </div>
-      <p className="computer__text desktop-icon__text">
-        My Computer
-      </p>
+      <p className="fakepc__text desktop-icon__text">My Computer</p>
     </div>
 
 <div className="recycle desktop-icon">
@@ -181,6 +187,130 @@ const FakeNews = () => {
       </div>
       <p className="recycle__text desktop-icon__text">Recycle Bin</p>
     </div>
+
+
+<div className="instagram desktop-icon">
+      <div className="instagram__icon desktop-icon__icon">
+      </div>
+      <p className="instagram__text desktop-icon__text">Instagram</p>
+    </div>
+
+<div className="prime desktop-icon">
+      <div className="prime__icon desktop-icon__icon">
+      </div>
+      <p className="prime__text desktop-icon__text">Prime Video</p>
+    </div>
+
+<div className="music desktop-icon">
+      <div className="music__icon desktop-icon__icon">
+      </div>
+      <p className="music__text desktop-icon__text">Apple Music</p>
+    </div>
+
+<div className="messenger desktop-icon">
+      <div className="messenger__icon desktop-icon__icon">
+      </div>
+      <p className="messenger__text desktop-icon__text">Messenger</p>
+    </div>
+
+<div className="explorer desktop-icon">
+      <div className="explorer__icon desktop-icon__icon">
+      </div>
+      <p className="explorer__text desktop-icon__text">Explorer</p>
+    </div>
+
+<div className="notes desktop-icon">
+      <div className="notes__icon desktop-icon__icon">
+      </div>
+      <p className="notes__text desktop-icon__text">Notes</p>
+    </div>
+
+<div className="discord desktop-icon">
+      <div className="discord__icon desktop-icon__icon">
+      </div>
+      <p className="discord__text desktop-icon__text">Discord</p>
+    </div>
+
+<div className="twitch desktop-icon">
+      <div className="twitch__icon desktop-icon__icon">
+      </div>
+      <p className="twitch__text desktop-icon__text">Twitch</p>
+    </div>
+
+<div className="google desktop-icon">
+      <div className="google__icon desktop-icon__icon">
+      </div>
+      <p className="google__text desktop-icon__text">Google</p>
+    </div>
+
+<div className="google desktop-icon">
+      <div className="google__icon desktop-icon__icon">
+      </div>
+      <p className="google__text desktop-icon__text">Google</p>
+    </div>
+
+<div className="facebook desktop-icon">
+      <div className="facebook__icon desktop-icon__icon">
+      </div>
+      <p className="facebook__text desktop-icon__text">Facebook</p>
+    </div>
+
+<div className="linkedin desktop-icon">
+      <div className="linkedin__icon desktop-icon__icon">
+      </div>
+      <p className="linkedin__text desktop-icon__text">LinkedIn</p>
+    </div>
+
+<div className="tinder desktop-icon">
+      <div className="tinder__icon desktop-icon__icon">
+      </div>
+      <p className="tinder__text desktop-icon__text">Tinder</p>
+    </div>
+
+<div className="chrome desktop-icon">
+      <div className="chrome__icon desktop-icon__icon">
+      </div>
+      <p className="chrome__text desktop-icon__text">Chrome</p>
+    </div>
+
+<div className="spotify desktop-icon">
+      <div className="spotify__icon desktop-icon__icon">
+      </div>
+      <p className="spotify__text desktop-icon__text">Spotify</p>
+    </div>
+
+<div className="twitter desktop-icon">
+      <div className="twitter__icon desktop-icon__icon">
+      </div>
+      <p className="twitter__text desktop-icon__text">Twitter</p>
+    </div>
+
+<div className="weather desktop-icon">
+      <div className="weather__icon desktop-icon__icon">
+      </div>
+      <p className="weather__text desktop-icon__text">Weather</p>
+    </div>
+
+<div className="snapchat desktop-icon">
+      <div className="snapchat__icon desktop-icon__icon">
+      </div>
+      <p className="snapchat__text desktop-icon__text">Snapchat</p>
+    </div>
+
+<div className="incognito desktop-icon">
+      <div className="incognito__icon desktop-icon__icon">
+      </div>
+      <p className="incognito__text desktop-icon__text">Incognito</p>
+    </div>
+
+<div className="youtube desktop-icon">
+      <div className="youtube__icon desktop-icon__icon">
+      </div>
+      <p className="youtube__text desktop-icon__text">YouTube</p>
+    </div>
+
+  <Notepad/>
+
   </div>
   </div>
     </>
