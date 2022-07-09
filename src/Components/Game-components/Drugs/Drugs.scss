@@ -1,11 +1,5 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "VT323", monospace;
-    color: #1f1f1f;
-  }
-  
-  .container {
+
+  .container-drugs {
     background: #f1f1f1;
     padding: 20px 10px;
   }
@@ -169,3 +163,66 @@
     width: 80%;
     padding: 20px;
   }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  
+  .noselect {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      
+  }
+  
+  .noselect {
+    cursor: pointer;
+    font-family: 'Libre Barcode 39 Text', cursive;
+    font-size: 40px;
+    background: none;
+    border: none;
+  }
+  
+  .noselect:before {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 5px;
+    transform: translateX(-3px) translateY(-10px);
+    background: rgba(255,0,0,0.0);
+    transition: 800ms;
+  }
+  
+  .noselect:hover:before {
+    animation: line 2000ms forwards;
+  }
+  
+  button:hover {
+    animation: blink 500ms 300ms;
+  }
+  
+  @keyframes line {
+    from { background: rgba(255,0,0,0.8);}
+    to {
+      background: rgba(255,0,0,0.8);
+      transform: translateX(-3px) translateY(38px);
+    }
+  }
+  
+  @keyframes blink {
+    from {color: #eee;}
+    to {color: black;}
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  

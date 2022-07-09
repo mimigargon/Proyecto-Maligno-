@@ -1,8 +1,9 @@
 
   
   #game {
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur7.cur), auto;
     position: relative;
-    width: 800px;
+    width: 1000px;
     height: 600px;
     margin: 20px auto 40px;
     box-shadow: 0 1px 15px #222;
@@ -10,10 +11,12 @@
     -webkit-transform: perspective(200px) rotateX(15deg) translateY(-90px);
             transform: perspective(200px) rotateX(15deg) translateY(-90px);
   }
-  
-  
+
   #gameover,
   #win {
+    background-image: url("https://www.quecursar.com/wp-content/uploads/2016/04/beneficios-del-hacking-etico.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -30,16 +33,6 @@
     pointer-events: none;
   }
   
-  #start-spot {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    background: #fff;
-  }
   
   .wall-left,
   .wall-right {
@@ -47,15 +40,15 @@
     bottom: 0;
     width: 100%;
     height: 400%;
-    background: linear-gradient(#fff,#777);
+    background-image: url("https://images.unsplash.com/photo-1495578942200-c5f5d2137def?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2FsbCUyMG9mJTIwZmFtZXxlbnwwfHwwfHw%3D&w=1000&q=80");
   }
   .wall-left {
     left: 0;
-    -webkit-clip-path: polygon(0 0, 40% 0, 35% 15%, 55% 35%, 45% 45%, 60% 60%, 30% 80%, 40% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 5% 0, 35% 15%, 55% 35%, 45% 45%, 65% 60%, 30% 80%, 40% 100%, 0 100%);
   }
   .wall-right {
     right: 0;
-    -webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 60% 100%, 44% 81%, 70% 60%,57% 44%, 65% 35%,  46% 15%);
+    -webkit-clip-path: polygon(25% 0, 100% 0, 100% 100%, 60% 100%, 44% 81%, 70% 60%,57% 44%, 65% 35%,  40% 15%);
   }
   
   #game:hover .wall-left,
@@ -90,7 +83,24 @@
             transform: translate3d(-50%, -50%, 0);
   }
   .instructions {
-    font-weight: lighter;
+    padding: 30px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: center;
+    }
+  
+
+  .start{
+    cursor: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    color: whitesmoke;
   }
   
   /* Les keyframes en bas de document, par convention */
@@ -117,4 +127,8 @@
       opacity: 1;
     }
   }
+  
+
+  
+
   

@@ -5,14 +5,14 @@ import Main from "./Components/Main/Main";
 import Login from "./Components/Login/Login"; */
 import "./App.scss";
 import Drugs from "./Components/Game-components/Drugs/Drugs";
-import Test from './Components/Game-components/test/Test'
+import Firewall from './Components/Game-components/Firewall/Firewall'
 
 function App() {
   return (
     <div>
       <Main/>
       <Drugs/>
-      <Test/>      
+      <Firewall/>      
 
     </div>
   );

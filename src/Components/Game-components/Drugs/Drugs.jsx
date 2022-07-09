@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Drugs.scss"
+import Swal from "sweetalert2";
 
 const Drugs = () => {
   const [drugs, setDrugs] = useState([]);
@@ -18,17 +19,37 @@ const Drugs = () => {
         console.log("Error en petición", error);
       }
     };
-
+	
+	
     getDrugs();
   }, []); // [] quiere decir que solo se ejecuta una vez
- 
   
+  const mystyle = {
+	margin: 0,
+    boxSizing: "border-box",
+    fontFamily: "VT323, monospace",
+    color: "#1f1f1f",
+  };
+  const text = {
+	color:" rgba(12, 128, 8, 0.8)"
+  };
+ 
+  const alert = () => {
+	  Swal.fire(
+		'Has encontrado la pista!',
+		'Buen trabajo',
+		'success'
+	  )
+  }
+
+
   return (
     <> 
-
-       <div id="showScroll" class="container">
-	<div class="receipt">
-		<h1 class="logo">CVS/pharmacy</h1>
+		<body style={mystyle}>
+		<link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet"></link>
+       <div id="showScroll" class="container-drugs">
+		<div class="receipt">
+		<h1 class="logo">stolen drugs pharmacy</h1>
 		<div class="address">
 			2910 Buford Hwy NE Atlanta, GA
 		</div>
@@ -47,12 +68,9 @@ const Drugs = () => {
 		<div class="transactionDetails">
         {drugs.map((drug) => {
           return (
-            <div className="drugs" key={drug}>    
-			{
-				console.log("drugsss10 : ",drugs[10])
-			}
-			<div class="detail"><b>nombre :</b> {drug.nombre}</div>
-			<div class="detail"> <b>precio :</b> {drug.tipoProblemaSuministro} ETH</div>
+            <div className="drugs" key={drug}>			
+			<div class="detail"><b>nombre :</b> {drug.nombre} </div>
+			<div class="detail"> <b>precio :</b> {drug.tipoProblemaSuministro < 10 ?  <span style={text}>oferta {drug.tipoProblemaSuministro}  </span> : <>{drug.tipoProblemaSuministro}</> } ETH</div>
 			<div class="detail"> <b>stock :</b> {drug.ffin} uds</div>    
             <hr/>     
             </div>
@@ -97,12 +115,7 @@ const Drugs = () => {
 			<div class="detail">CHANGE</div>
 			<div class="detail">.00</div>
 		</div>
-		<div class="receiptBarcode">
-			<div class="barcode">
-            <img src="https://www.cognex.com/BarcodeGenerator/Content/images/isbn.png"></img>
-			</div>
-			2003 0998 9000 8730 21
-		</div>
+		
 		<div class="returnPolicy bold">
 			Returns with receipt, subject to CVS Return Policy, thru 12/04/2019
 		</div>
@@ -152,10 +165,10 @@ const Drugs = () => {
 					</div>
 				</div>
 				<div class="barcode">
-					<img src="https://www.cognex.com/BarcodeGenerator/Content/images/isbn.png"></img>
+				<button class="noselect" onClick={alert}>200391290</button>
 				</div>
 				<div class="barcodeID center">
-					9007 9876 9087 7665 62
+				
 				</div>
 				<div class="legal center">
 					ExtraCare card required. Excludes lottery, money orders, postage stamps, milk, prescriptions, pre-paid cards, gift cards, pseudoephedrine products, other fees, deposits, taxes, alcohol and local exclusions. No cash back. Tax charged on pre-coupon price
@@ -170,7 +183,7 @@ const Drugs = () => {
 		</div>
 	</div>
 </div>
-	
+	</body>
 
       
     </>
