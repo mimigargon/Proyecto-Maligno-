@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Fake-news.scss";
-import Notepad from '../Notepad/Notepad';
+//import Notepad from '../Notepad/Notepad';
 
 //He cogido como inspiración para este componente de Fake-News un pen de codepen
 //https://codepen.io/fizzypop109/pen/Kjbbjq
@@ -309,7 +309,7 @@ const FakeNews = () => {
       <p className="youtube__text desktop-icon__text">YouTube</p>
     </div>
 
-  <Notepad/>
+{/*   <Notepad/> */}
 
   </div>
   </div>
