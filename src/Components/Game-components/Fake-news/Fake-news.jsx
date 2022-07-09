@@ -1,6 +1,8 @@
 import React from 'react'
 import "./Fake-news.scss";
-//import Notepad from '../Notepad/Notepad';
+import Notepad from '../Notepad/Notepad';
+import Swal from 'sweetalert2';
+import {useState} from 'react';
 
 //He cogido como inspiración para este componente de Fake-News un pen de codepen
 //https://codepen.io/fizzypop109/pen/Kjbbjq
@@ -10,6 +12,81 @@ import "./Fake-news.scss";
 //En este componente has de seleccionar la noticia que sea verdadera entre todas las que hay
 
 const FakeNews = () => {
+  
+  const showAlertInsta = () => {
+    Swal.fire('M4LIGN0 DICE: "No es momento para mirar fotos de gatitos"');
+  }
+
+  const showAlertPrime = () => {
+    Swal.fire('M4LIGN0 DICE: "Ya tendrás tiempo para ver la última temporada de The Boys"');
+  }
+
+  const showAlertApple = () => {
+    Swal.fire('M4LIGN0 DICE: "Ahora en serio... ¿hay alguien que de verdad utilice Apple Music?"');
+  }
+
+  const showAlertMessenger = () => {
+    Swal.fire('M4LIGN0 DICE: ""');
+  }
+
+  const showAlertExplorer = () => {
+    Swal.fire('M4LIGN0 DICE: "Así que eres de esas personas que utilizan Internet Explorer en pleno siglo XXI"');
+  }
+  
+
+  const showAlertDiscord = () => {
+    Swal.fire('M4LIGN0 DICE: ""');
+  }
+
+  const showAlertTwitch = () => {
+    Swal.fire('M4LIGN0 DICE: "No, ElRubius no está transmitiendo ahora mismo. Céntrate."');
+  }
+
+  const showAlertGoogle = () => {
+    Swal.fire('M4LIGN0 DICE: ""');
+  }
+
+  const showAlertFacebook = () => {
+    Swal.fire('M4LIGN0 DICE: "Las fotos del viaje a Benidorm de tu tía pueden esperar"');
+  }
+
+  const showAlertLinkedIn = () => {
+    Swal.fire('M4LIGN0 DICE: "No te engañes, nadie te va a contratar"');
+  }
+
+  const showAlertTinder = () => {
+    Swal.fire('M4LIGN0 DICE: "...really?"');
+  }
+
+  const showAlertChrome = () => {
+    Swal.fire('M4LIGN0 DICE: ""');
+  }
+
+  const showAlertSpotify = () => {
+    Swal.fire('M4LIGN0 DICE: "Todos sabemos que te gusta escuchar a Luis Miguel"');
+  }
+
+  const showAlertTwitter = () => {
+    Swal.fire('M4LIGN0 DICE: "#TeamMaligno"');
+  }
+
+  const showAlertWeather = () => {
+    Swal.fire('M4LIGN0 DICE: ""');
+  }
+
+  const showAlertSnapchat = () => {
+    Swal.fire('M4LIGN0 DICE: ""');
+  }
+
+  const showAlertIncognito = () => {
+    Swal.fire('M4LIGN0 DICE: "¿Qué pretendes buscar aquí, eh pillín?"');
+  }
+
+  const showAlertYouTube = () => {
+    Swal.fire('M4LIGN0 DICE: "Ningún videotutorial podrá ayudarte a atrapar a Maligno"');
+  }
+  
+  
   function updateTime(){
 
 //Esta función actualiza en tiempo real la hora local con la plantilla del ordenador
@@ -41,7 +118,6 @@ const FakeNews = () => {
   }
   
   setInterval(updateTime, 1000);
-  
   
   // Para poder arrastrar los objetos
   
@@ -87,6 +163,15 @@ const FakeNews = () => {
     }
   }
   
+  //Para mostrar el componente Notepad
+
+  const [isShown, setIsShown] = useState(false);
+
+  const handleClick = event => {
+
+    setIsShown(current => !current);
+}
+
     return (
     <>
     <div className="container-fakeNews">
@@ -190,129 +275,123 @@ const FakeNews = () => {
 
 
 <div className="instagram desktop-icon">
-      <div className="instagram__icon desktop-icon__icon">
+      <div className="instagram__icon desktop-icon__icon" onClick={() => showAlertInsta()}>
       </div>
       <p className="instagram__text desktop-icon__text">Instagram</p>
     </div>
 
 <div className="prime desktop-icon">
-      <div className="prime__icon desktop-icon__icon">
+      <div className="prime__icon desktop-icon__icon" onClick={() => showAlertPrime()}>
       </div>
       <p className="prime__text desktop-icon__text">Prime Video</p>
     </div>
 
 <div className="music desktop-icon">
-      <div className="music__icon desktop-icon__icon">
+      <div className="music__icon desktop-icon__icon" onClick={() => showAlertApple()}>
       </div>
       <p className="music__text desktop-icon__text">Apple Music</p>
     </div>
 
 <div className="messenger desktop-icon">
-      <div className="messenger__icon desktop-icon__icon">
+      <div className="messenger__icon desktop-icon__icon" onClick={() => showAlertMessenger()}>
       </div>
       <p className="messenger__text desktop-icon__text">Messenger</p>
     </div>
 
 <div className="explorer desktop-icon">
-      <div className="explorer__icon desktop-icon__icon">
+      <div className="explorer__icon desktop-icon__icon" onClick={() => showAlertExplorer()}>
       </div>
       <p className="explorer__text desktop-icon__text">Explorer</p>
     </div>
 
-<div className="notes desktop-icon">
+<div className="notes desktop-icon" onClick={handleClick}>
       <div className="notes__icon desktop-icon__icon">
       </div>
       <p className="notes__text desktop-icon__text">Notes</p>
+      
     </div>
 
-<div className="discord desktop-icon">
+<div className="discord desktop-icon" onClick={() => showAlertDiscord()}>
       <div className="discord__icon desktop-icon__icon">
       </div>
       <p className="discord__text desktop-icon__text">Discord</p>
     </div>
 
-<div className="twitch desktop-icon">
+<div className="twitch desktop-icon" onClick={() => showAlertTwitch()}>
       <div className="twitch__icon desktop-icon__icon">
       </div>
       <p className="twitch__text desktop-icon__text">Twitch</p>
     </div>
 
-<div className="google desktop-icon">
-      <div className="google__icon desktop-icon__icon">
+<div className="google desktop-icon" onClick={() => showAlertGoogle()}>
+      <div className="google__icon desktop-icon__icon" >
       </div>
       <p className="google__text desktop-icon__text">Google</p>
     </div>
 
-<div className="google desktop-icon">
-      <div className="google__icon desktop-icon__icon">
-      </div>
-      <p className="google__text desktop-icon__text">Google</p>
-    </div>
-
-<div className="facebook desktop-icon">
-      <div className="facebook__icon desktop-icon__icon">
+<div className="facebook desktop-icon" onClick={() => showAlertFacebook()}>
+      <div className="facebook__icon desktop-icon__icon" onClick={() => showAlertFacebook()}>
       </div>
       <p className="facebook__text desktop-icon__text">Facebook</p>
     </div>
 
-<div className="linkedin desktop-icon">
-      <div className="linkedin__icon desktop-icon__icon">
+<div className="linkedin desktop-icon" onClick={() => showAlertLinkedIn()}>
+      <div className="linkedin__icon desktop-icon__icon" onClick={() => showAlertLinkedIn()}>
       </div>
       <p className="linkedin__text desktop-icon__text">LinkedIn</p>
     </div>
 
-<div className="tinder desktop-icon">
+<div className="tinder desktop-icon" onClick={() => showAlertTinder()}>
       <div className="tinder__icon desktop-icon__icon">
       </div>
       <p className="tinder__text desktop-icon__text">Tinder</p>
     </div>
 
-<div className="chrome desktop-icon">
+<div className="chrome desktop-icon" onClick={() => showAlertChrome()}>
       <div className="chrome__icon desktop-icon__icon">
       </div>
       <p className="chrome__text desktop-icon__text">Chrome</p>
     </div>
 
-<div className="spotify desktop-icon">
+<div className="spotify desktop-icon" onClick={() => showAlertSpotify()}>
       <div className="spotify__icon desktop-icon__icon">
       </div>
       <p className="spotify__text desktop-icon__text">Spotify</p>
     </div>
 
-<div className="twitter desktop-icon">
+<div className="twitter desktop-icon" onClick={() => showAlertTwitter()}>
       <div className="twitter__icon desktop-icon__icon">
       </div>
       <p className="twitter__text desktop-icon__text">Twitter</p>
     </div>
 
-<div className="weather desktop-icon">
+<div className="weather desktop-icon" onClick={() => showAlertWeather()}>
       <div className="weather__icon desktop-icon__icon">
       </div>
       <p className="weather__text desktop-icon__text">Weather</p>
     </div>
 
-<div className="snapchat desktop-icon">
+<div className="snapchat desktop-icon" onClick={() => showAlertSnapchat()}>
       <div className="snapchat__icon desktop-icon__icon">
       </div>
       <p className="snapchat__text desktop-icon__text">Snapchat</p>
     </div>
 
-<div className="incognito desktop-icon">
+<div className="incognito desktop-icon" onClick={() => showAlertIncognito()}>
       <div className="incognito__icon desktop-icon__icon">
       </div>
       <p className="incognito__text desktop-icon__text">Incognito</p>
     </div>
 
-<div className="youtube desktop-icon">
+<div className="youtube desktop-icon" onClick={() => showAlertYouTube()}>
       <div className="youtube__icon desktop-icon__icon">
       </div>
       <p className="youtube__text desktop-icon__text">YouTube</p>
     </div>
-
-{/*   <Notepad/> */}
-
+    {isShown && <Notepad/>}
   </div>
   </div>
+ 
     </>
   )
 }

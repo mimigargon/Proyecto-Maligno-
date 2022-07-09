@@ -1,45 +1,71 @@
 import React from "react";
+import "./Notepad.scss";
 
 const Notepad = () => {
-
- 
-    return (
+  return (
     <>
-        		<div class="notepadContainer">
-			<div class="notepad">
-				<div class="notepad-bar">
-					<div class="notepad-icon">
-						<img src="http://www.milk.com.hk/sites/default/files/imagecache/largebanner/sites/default/files/notepad_1.png" alt="notepad icon"/>
-					</div>
-					<div class="notepad-title">Programs - Notepad</div>
-						<div class="notepad-exit">
-							<div class="button-exit">&#10060;</div>
-						</div>
-						<div class="notepad-maximize">
-							<div class="button-maximize">
-								<div class="icon-maximize"></div>
-							</div>
-						</div>
-						<div class="notepad-minimize">
-							<div class="button-minimize">
-								<div class="icon-minimize"></div>
-							</div>
-						</div>
-				</div>
-				<div class="notepad-settings">
-				 	<div class="settings-text"><span class="underline">F</span>ile</div>
-				 	<div class="settings-text"><span class="underline">E</span>dit</div>
-				 	<div class="settings-text"><span class="underline">S</span>earch</div>
-				 	<div class="settings-text"><span class="underline">H</span>elp</div>
-				</div>
-				<div class="notepad-content">
-					<h1>Maligno </h1> 
-					<p>
-                        dgjkdhfgjkdhfg
-					</p>
-				</div> 
-			</div> 
-		</div> 
+      <div className="notepadContainer">
+        <div className="notepad">
+          <div className="notepad-bar">
+            <div className="notepad-icon">
+              <img
+                src="https://www.pngkey.com/png/full/142-1426797_download-count-windows-95-icon-png.png"
+                alt="notepad icon"
+              />
+            </div>
+            <div className="notepad-title">Programs - Notepad</div>
+            <div className="notepad-exit">
+              <div className="button-exit">&#10060;</div>
+            </div>
+            <div className="notepad-maximize">
+              <div className="button-maximize">
+                <div className="icon-maximize"></div>
+              </div>
+            </div>
+            <div className="notepad-minimize">
+              <div className="button-minimize">
+                <div className="icon-minimize"></div>
+              </div>
+            </div>
+          </div>
+          <div className="notepad-settings">
+            <div className="settings-text">
+              <span className="underline">F</span>ile
+            </div>
+            <div className="settings-text">
+              <span className="underline">E</span>dit
+            </div>
+            <div className="settings-text">
+              <span className="underline">S</span>earch
+            </div>
+            <div className="settings-text">
+              <span className="underline">H</span>elp
+            </div>
+          </div>
+          <div className="notepad-content">
+            <h2>Fake News - ¿Cuál de estas noticias es la verdadera?</h2>
+			<div className="theories">
+            <div className="flatEarth">
+              <h3>La Tierra es plana y la NASA nos lo niega</h3>
+              <p>
+                No contenta con inventarse la llegada del hombre a la luna, la
+                NASA también estaría detrás de la idea de que la Tierra es
+                redonda. 
+              </p>
+			  <button className="selectBtn">Seleccionar</button>
+            </div>
+            <div className="illuminati">
+              <h3>Estamos gobernados por reptilianos</h3>
+              <p>
+			  Se dice que provienen de un sistema estelar llamado Alfa Draconis y que en la actualidad habitan en una gran red de cuevas subterráneas.
+			  La gente se refiere a ellos para hablar de seres que controlan la política, la sociedad y la mente humana como tal por medio de su infiltración entre nosotros con el único objetivo de subyugarnos y esclavizar ser humano.
+              </p>
+			  <button className="selectBtn">Seleccionar</button>
+            </div>
+			</div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
