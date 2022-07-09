@@ -18,7 +18,7 @@ $spacing-md: 25px;
     background-color: #1a0000;
     color: #ff4d4d;
     font-family: monospace;
-    height: 100vh;
+    min-height: 100vh;
     
 
     .home-title {
@@ -29,7 +29,7 @@ $spacing-md: 25px;
         text-align: center;
         padding-top: 30px;
 
-        animation: shake 600ms ease-in-out infinite alternate, rotate-letter 4s forwards; 
+        animation: shake 600ms ease-in-out infinite alternate, rotate-letter 10s infinite; 
         text-shadow: 0 0 .07em,
             -.2em 0 2em,
             .2em 0 2em;
@@ -37,7 +37,7 @@ $spacing-md: 25px;
         
 
         div {
-            animation: rotate-letter 7s forwards;
+            animation: rotate-letter 10s infinite;
             font-family: 'elixia';
             display: inline-block;
         }
@@ -45,6 +45,7 @@ $spacing-md: 25px;
     }
 
     .container {
+        box-sizing: inherit;
         margin-bottom: 40px;
         padding: $spacing-md;
         border: 7px solid #ff4d4d;

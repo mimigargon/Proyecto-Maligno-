@@ -1,15 +1,6 @@
-* {
-    font-family: monospace;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  body {
-    padding: 0;
-    margin: 0;
-  }
-  
+
+.stolen-container {
+
   h1 {
     text-align: center;
     font-size: 7rem;
@@ -60,13 +51,14 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    cursor: url('https://www.dropbox.com/s/th0zd8ufw5xkwye/mallet.png?raw=1'), pointer;
   }
   
   .hole {
     flex: 1 0 33.33%;
     overflow: hidden;
     position: relative;
-    padding-left: 50px;
+    gap: 50px;
   }
   
   .hole::after {
@@ -89,23 +81,25 @@
     transition:all 0.4s;
   }
   
-  .laptop, .computer, .olddisk, .phone, .gun, .knife {
+  .laptop, .computer, .olddisk, .pill, .gun, .knife {
     position: relative;
     
     img {
-      width: 100%;
+      width: 80%;
       object-fit: cover;
     }
   }
   
   .pc:hover, .other:hover {
-    cursor: pointer;
+    cursor: url('https://www.dropbox.com/s/th0zd8ufw5xkwye/mallet.png?raw=1'), pointer;
   }
   
   .hole.up .pc {
-    top: 0;
+    top: 20px;
   }
   
   .hole.down .other {
-    top: 0;
+    top: 20px;
   }
+}
+  

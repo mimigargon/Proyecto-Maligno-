@@ -1,6 +1,7 @@
 import React from "react";
+import Swal from "sweetalert2";
 import laptop from "../../../images/laptop.png";
-import iphone from "../../../images/iphone.png";
+import pastillas from "../../../images/pastillas.png";
 import computer from "../../../images/computer.png";
 import gun from "../../../images/gun.png";
 import olddisk from "../../../images/disk.png";
@@ -11,6 +12,8 @@ function StolenGoods() {
   let lastHole;
   let pcOrNot;
   let timeUp = false;
+  let timeCounter = 0;
+  let counter = 0;
   let score = 0;
 
   function randomTime(min, max) {
@@ -36,6 +39,7 @@ function StolenGoods() {
       if (!timeUp) peep();
     }, time);
   }
+
   function startGame() {
     const pcs = document.querySelectorAll(".pc");
     const others = document.querySelectorAll(".other");
@@ -45,16 +49,50 @@ function StolenGoods() {
     scoreBoard.textContent = 0;
     timeUp = false;
     score = 0;
+    timeCounter = 60;
+    const timeLeft = document.querySelector(".time-left");
+    timeLeft.textContent = timeCounter;
+    counter = setInterval(timer, 1000);
     peep();
-    setTimeout(() => (timeUp = true), 30000);
+    setTimeout(() => (timeUp = true), 60000);
   }
+
+  function endGame() {
+    Swal.fire({
+      title: "¡Se acabó el tiempo!",
+    });
+  }
+
+  function timer() {
+    timeCounter = timeCounter - 1;
+    const timeLeft = document.querySelector(".time-left");
+    timeLeft.textContent = timeCounter;
+
+    if (timeCounter <= 0) {
+      clearInterval(counter);
+      endGame();
+    }
+  }
+
+  function finishedGame() {
+    if (score === 10) {
+      Swal.fire({
+        title: "¡Has descifrado parte de las credenciales!",
+      });
+
+      
+    }
+  }
+
   function bonk(e) {
     const scoreBoard = document.querySelector(".score");
     if (!e.isTrusted) return; // cheater!
     score++;
     this.parentNode.classList.remove("up");
     scoreBoard.textContent = score;
+    finishedGame();
   }
+
   function debonk(e) {
     const scoreBoard = document.querySelector(".score");
     if (!e.isTrusted) return; // cheater!
@@ -64,14 +102,16 @@ function StolenGoods() {
   }
 
   return (
-    <div className="container">
+    <div className="stolen-container">
       <h1>Whack-a-PC!</h1>
       <div className="description">
-        Durante 30 segundos deberás capturar cualquier elemento parecido o que
-        pertenezca a un ordenador.
+        Debes capturar 10 elementos tecnológicos robados en 1 minuto.
       </div>
       <div className="result">
         Score: <span className="score">0</span>
+      </div>
+      <div className="timer">
+        <span className="time-left"></span>
       </div>
       <button className="startBtn" onClick={startGame}>
         Start!
@@ -84,8 +124,8 @@ function StolenGoods() {
             </div>
           </div>
           <div className="other">
-            <div className="phone">
-              <img src={iphone} alt="phone" />
+            <div className="pill">
+              <img src={pastillas} alt="pill" />
             </div>
           </div>
         </div>
@@ -108,8 +148,8 @@ function StolenGoods() {
             </div>
           </div>
           <div className="other">
-            <div className="phone">
-              <img src={iphone} alt="phone" />
+            <div className="pill">
+              <img src={pastillas} alt="pill" />
             </div>
           </div>
         </div>
@@ -132,8 +172,8 @@ function StolenGoods() {
             </div>
           </div>
           <div className="other">
-            <div className="phone">
-              <img src={iphone} alt="phone" />
+            <div className="pill">
+              <img src={pastillas} alt="pill" />
             </div>
           </div>
         </div>
