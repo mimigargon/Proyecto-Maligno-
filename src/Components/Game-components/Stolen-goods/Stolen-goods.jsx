@@ -76,6 +76,7 @@ function StolenGoods() {
 
   function finishedGame() {
     if (score === 10) {
+      timeUp = false; 
       Swal.fire({
         title: "¡Has descifrado parte de las credenciales!",
       });
