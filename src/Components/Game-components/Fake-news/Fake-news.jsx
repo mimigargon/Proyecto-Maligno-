@@ -14,7 +14,14 @@ import {useState} from 'react';
 const FakeNews = () => {
   
   const showAlertInsta = () => {
-    Swal.fire('M4LIGN0 DICE: "No es momento para mirar fotos de gatitos"');
+    Swal.fire({
+      title: 'M4LIGN0 DICE: "No es momento para mirar fotos de gatitos"',
+      fontFamily: 'Comic Sans MS',
+      color: "#ffffff",
+      confirmButtonColor: '#3085d6',
+      background: '#C1C1C1',
+    })
+    ('M4LIGN0 DICE: "No es momento para mirar fotos de gatitos"');
   }
 
   const showAlertPrime = () => {
@@ -26,14 +33,13 @@ const FakeNews = () => {
   }
 
   const showAlertMessenger = () => {
-    Swal.fire('M4LIGN0 DICE: ""');
+    Swal.fire('M4LIGN0 DICE: "Ya podrás chatear más tarde."');
   }
 
   const showAlertExplorer = () => {
     Swal.fire('M4LIGN0 DICE: "Así que eres de esas personas que utilizan Internet Explorer en pleno siglo XXI"');
   }
   
-
   const showAlertDiscord = () => {
     Swal.fire('M4LIGN0 DICE: ""');
   }
@@ -47,11 +53,11 @@ const FakeNews = () => {
   }
 
   const showAlertFacebook = () => {
-    Swal.fire('M4LIGN0 DICE: "Las fotos del viaje a Benidorm de tu tía pueden esperar"');
+    Swal.fire('M4LIGN0 DICE: "Las fotos del viaje a Benidorm de tu tía pueden esperar."');
   }
 
   const showAlertLinkedIn = () => {
-    Swal.fire('M4LIGN0 DICE: "No te engañes, nadie te va a contratar"');
+    Swal.fire('M4LIGN0 DICE: "No te engañes, nadie te va a contratar."');
   }
 
   const showAlertTinder = () => {
@@ -63,7 +69,7 @@ const FakeNews = () => {
   }
 
   const showAlertSpotify = () => {
-    Swal.fire('M4LIGN0 DICE: "Todos sabemos que te gusta escuchar a Luis Miguel"');
+    Swal.fire('M4LIGN0 DICE: "Todos sabemos que te gusta escuchar a Luis Miguel."');
   }
 
   const showAlertTwitter = () => {
@@ -83,7 +89,7 @@ const FakeNews = () => {
   }
 
   const showAlertYouTube = () => {
-    Swal.fire('M4LIGN0 DICE: "Ningún videotutorial podrá ayudarte a atrapar a Maligno"');
+    Swal.fire('M4LIGN0 DICE: "Ningún videotutorial podrá ayudarte a atrapar a Maligno."');
   }
   
   
@@ -166,9 +172,7 @@ const FakeNews = () => {
   //Para mostrar el componente Notepad
 
   const [isShown, setIsShown] = useState(false);
-
   const handleClick = event => {
-
     setIsShown(current => !current);
 }
 
@@ -308,7 +312,6 @@ const FakeNews = () => {
       <div className="notes__icon desktop-icon__icon">
       </div>
       <p className="notes__text desktop-icon__text">Notes</p>
-      
     </div>
 
 <div className="discord desktop-icon" onClick={() => showAlertDiscord()}>

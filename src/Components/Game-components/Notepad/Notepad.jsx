@@ -1,8 +1,33 @@
 import React from "react";
 import "./Notepad.scss";
+import Swal from "sweetalert2";
 
 const Notepad = () => {
-  return (
+	const showAlertError1 = () => {
+		Swal.fire({
+			icon: 'error',
+			title: '¡Nop!',
+			text: 'Por mucho que cueste creerlo, la tierra es... ¡redonda! Sigue intentándolo',
+		})
+	  }
+
+	const showAlertError2 = () => {
+		Swal.fire({
+			icon: 'error',
+			title: '¡Hasta luego, cocodrilo!',
+			text: 'Si piensas que compartimos el planeta con hombres-lagarto, has fallado.',
+		})
+	  }
+
+	const showAlertSuccess = () => {
+		Swal.fire(
+			'¡Encontraste parte de la contraseña!',
+			'Y pensar que dentro de poco podrás atraparme con la mente...',
+			'success'
+		  )
+	  }
+	
+	return (
     <>
       <div className="notepadContainer">
         <div className="notepad">
@@ -52,7 +77,7 @@ const Notepad = () => {
                 NASA también estaría detrás de la idea de que la Tierra es
                 redonda. 
               </p>
-			  <button className="selectBtn">Seleccionar</button>
+			  <button className="selectBtn" onClick={() => showAlertError1()}>Seleccionar</button>
             </div>
             <div className="illuminati">
               <h3>Estamos gobernados por reptilianos</h3>
@@ -60,7 +85,14 @@ const Notepad = () => {
 			  Se dice que provienen de un sistema estelar llamado Alfa Draconis y que en la actualidad habitan en una gran red de cuevas subterráneas.
 			  La gente se refiere a ellos para hablar de seres que controlan la política, la sociedad y la mente humana como tal por medio de su infiltración entre nosotros con el único objetivo de subyugarnos y esclavizar ser humano.
               </p>
-			  <button className="selectBtn">Seleccionar</button>
+			  <button className="selectBtn" onClick={() => showAlertError2()}>Seleccionar</button>
+            </div>
+            <div className="neuralink">
+              <h3>Neuralink empezará a implantar chips cerebrales en humanos en 2022</h3>
+              <p>
+			  El chip permitirá a las personas comunicarse con dispositivos electrónicos a través del pensamiento. los primeros en recibirlos serán personas tetrapléjicas o con graves lesiones en la médula espinal, que gracias al chip estarán en condiciones de comunicarse con todo tipo de dispositivos electrónicos utilizando solo el pensamiento.
+              </p>
+			  <button className="selectBtn" onClick={() => showAlertSuccess()}>Seleccionar</button>
             </div>
 			</div>
           </div>
