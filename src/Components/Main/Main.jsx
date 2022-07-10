@@ -23,7 +23,7 @@ const Main = () => {
         <Link to={"/firewall"}>
           <p>https:/overpassthefirewall.com</p>
         </Link>
-        <Link to={"/fake-news"}>
+        <Link to={"/fakenews"}>
           <p>https://veryrealnews.com</p>
         </Link>
         <Link to={"/cryptos"}>

@@ -9,6 +9,7 @@ import Weapons from "./Components/Game-components/Weapons/Weapons";
 import StolenGoods from "./Components/Game-components/Stolen-goods/Stolen-goods";
 import Firewall from "./Components/Game-components/Firewall/Firewall";
 import Drugs from "./Components/Game-components/Drugs/Drugs";
+import FakeNews from "./Components/Game-components/Fake-news/Fakenews";
 
 function App() {
   return (
@@ -23,11 +24,8 @@ function App() {
         <Route path='/weapons' element={<Weapons/>}/>
         <Route path='/firewall' element={<Firewall/>}/>
         <Route path='/drugs' element={<Drugs/>}/>
-
+        <Route path='/fakenews' element={<FakeNews/>}/>
       </Routes>
-
-      
-
     </>
   );
 }
