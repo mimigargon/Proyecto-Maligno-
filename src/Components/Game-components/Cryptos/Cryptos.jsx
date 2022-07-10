@@ -81,9 +81,9 @@ class PlayArea extends React.Component{
             icon: "https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/128/Ethereum-ETH-icon.png",
         },
         {
-            name: "Bitcoin", 
+            name: "Binance", 
             accent: "",
-            icon: "https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/128/Dogecoin-DOGE-icon.png",
+            icon: "https://icons.iconarchive.com/icons/cjdowner/cryptocurrency/128/Binance-Coin-icon.png",
         },
         {
             name: "Bitcoin", 
