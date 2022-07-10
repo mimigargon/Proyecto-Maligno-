@@ -1,6 +1,6 @@
 
   
-  .game {
+  .fw-game {
   cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur7.cur), auto;
     position: relative;
     width: 1000px;
@@ -51,17 +51,17 @@
     -webkit-clip-path: polygon(25% 0, 100% 0, 100% 100%, 60% 100%, 44% 81%, 70% 60%,57% 44%, 65% 35%,  40% 15%);
   }
   
-  .game:hover .wall-left,
-  .game:hover .wall-right {
+  .fw-game:hover .wall-left,
+  .fw-game:hover .wall-right {
     -webkit-animation: wallScroll 10s ease-in forwards;
             animation: wallScroll 10s ease-in forwards;
   }
-  .game:hover .win {
+  .fw-game:hover .win {
     -webkit-animation: win 10s linear forwards;
             animation: win 10s linear forwards;
   }
   
-  .game:hover .start-spot {
+  .gamfw-gamee:hover .start-spot {
     display: none;
   }
   

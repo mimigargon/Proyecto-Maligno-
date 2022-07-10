@@ -51,7 +51,8 @@ const Drugs = () => {
 		<div class="receipt">
 		<h1 class="logo">stolen drugs pharmacy</h1>
 		<div class="address">
-			2910 Buford Hwy NE Atlanta, GA
+			En este ticket se encuentra la siguiente pista, busca bien 👀.
+			¡Buena suerte!
 		</div>
 		<div class="transactionDetails">
 			<div class="detail">Reg#17</div>
