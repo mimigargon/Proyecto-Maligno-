@@ -5,7 +5,7 @@
   .fw-game {
   cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur7.cur), auto;
     position: relative;
-    width: 1000px;
+    width: 800px;
     height: 600px;
     margin: 20px auto 40px;
     box-shadow: 0 1px 15px #222;
@@ -108,7 +108,6 @@
 
 }
 
-  
   @keyframes wallScroll {
     0% {
       transform: none;
@@ -118,7 +117,7 @@
     }
   }
   
-  
+
   @keyframes win {
     0% {
       opacity: 0;
