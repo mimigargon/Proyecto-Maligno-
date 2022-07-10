@@ -14,14 +14,7 @@ import {useState} from 'react';
 const FakeNews = () => {
   
   const showAlertInsta = () => {
-    Swal.fire({
-      title: 'M4LIGN0 DICE: "No es momento para mirar fotos de gatitos"',
-      fontFamily: 'Comic Sans MS',
-      color: "#ffffff",
-      confirmButtonColor: '#3085d6',
-      background: '#C1C1C1',
-    })
-    ('M4LIGN0 DICE: "No es momento para mirar fotos de gatitos"');
+    Swal.fire('M4LIGN0 DICE: "No es momento para mirar fotos de gatitos"');
   }
 
   const showAlertPrime = () => {

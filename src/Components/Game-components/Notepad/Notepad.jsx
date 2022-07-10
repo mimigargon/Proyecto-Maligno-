@@ -19,6 +19,22 @@ const Notepad = () => {
 		})
 	  }
 
+	const showAlertError3 = () => {
+		Swal.fire({
+			icon: 'error',
+			title: 'Más quisieras.',
+			text: 'Elon Musk es dueño hasta de tu alma.',
+		})
+	  }
+
+	const showAlertError4 = () => {
+		Swal.fire({
+			icon: 'error',
+			title: 'Bye Bye, bro.',
+			text: 'Realmente la noticia puede ser 100% verídica... pero no es la respuesta correcta, sorry.',
+		})
+	  }
+
 	const showAlertSuccess = () => {
 		Swal.fire(
 			'¡Encontraste parte de la contraseña!',
@@ -93,6 +109,21 @@ const Notepad = () => {
 			  El chip permitirá a las personas comunicarse con dispositivos electrónicos a través del pensamiento. los primeros en recibirlos serán personas tetrapléjicas o con graves lesiones en la médula espinal, que gracias al chip estarán en condiciones de comunicarse con todo tipo de dispositivos electrónicos utilizando solo el pensamiento.
               </p>
 			  <button className="selectBtn" onClick={() => showAlertSuccess()}>Seleccionar</button>
+            </div>
+            <div className="twitternews">
+              <h3>Varios tuiteros juntan sus ahorros y compran Tesla</h3>
+              <p>
+			  Después de que Elon Musk mostrara públicamente su intención de comprar la red social Twitter, varios tuiteros han juntado sus ahorros y han comprado Tesla. De esta manera, la empresa de diseño, fabricación y venta de coches eléctricos deja de pertenecer al empresario sudafricano.
+              </p>
+			  <button className="selectBtn" onClick={() => showAlertError3()}>Seleccionar</button>
+            </div>
+            <div className="cryptobro">
+              <h3>«Cryptobro» se convierte en «mendigobro»</h3>
+              <p>
+			  Tras meses alardeando de sus “astutas inversiones”, Jaime Masiá Sánchez ha pasado de ser considerado un cryptobro -el término con el que se autodenominan los jóvenes expertos en criptomonedas- a ser considerado un mendigobro.
+			   “Hice caso de los memes equivocados y he acabado en la ruina”, ha explicado Masiá en las redes sociales.
+              </p>
+			  <button className="selectBtn" onClick={() => showAlertError4()}>Seleccionar</button>
             </div>
 			</div>
           </div>
