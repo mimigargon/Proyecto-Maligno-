@@ -1,4 +1,6 @@
-import { React, ReactDOM } from "React";
+import { React,ReactDOM } from "react";
+import "./Cryptos.scss";
+
 
 class Cryptos extends React.Component {
   constructor(props) {
@@ -246,9 +248,7 @@ class PlayArea extends React.Component {
 }
 
 class PlayModal extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+ 
   render() {
     return (
       <div className={this.props.gameOver ? "modal__wrapper" : "hidden"}>
@@ -312,6 +312,7 @@ class App extends React.Component {
             </div>
         );
     }
-}
+};
 
 ReactDOM.render(<App/>, document.getElementById("root"));
+export default Cryptos;
