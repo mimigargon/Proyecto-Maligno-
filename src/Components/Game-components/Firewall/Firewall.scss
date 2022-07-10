@@ -1,3 +1,5 @@
+.fw-container{
+
 
   
   .fw-game {
@@ -95,7 +97,7 @@
     }
   
 
-  .start{
+  .fw-start{
     font-size: 30px;
     cursor: none;
     display: flex;
@@ -103,6 +105,8 @@
     margin-bottom: 50px;
     color: black;
   }
+
+}
   
   /* Les keyframes en bas de document, par convention */
   

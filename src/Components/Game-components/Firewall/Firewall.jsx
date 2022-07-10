@@ -1,13 +1,9 @@
 import React from 'react'
 import "./Firewall.scss"
-import useTimeout from '../../../useTimeOut';
-
-
 
 function Firewall() {
   return (
-    <>
-
+  <div className='fw-container'>
   <div className="instructions">
     <h1>¿Alguna vez has tenido que conseguir evadir un firewall?</h1>
     <p>En esta prueba vas a tener que demostrar tu capacidad de burlar sistemas de seguridad como un firewall.</p>
@@ -19,11 +15,9 @@ function Firewall() {
     <div className="wall-right"></div>
     <div className="gameover"><h1>You lose</h1></div>
     <div className="win"><h1>Congratulations !<br/>You win</h1></div> 
-    
   </div>
-
-
-    </>
+    <p className="fw-start">INICIO</p>
+  </div>
   )
 }
 
