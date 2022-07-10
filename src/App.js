@@ -7,6 +7,8 @@ import Login from "./Components/Login/Login";
 import "./App.scss";
 import Weapons from "./Components/Game-components/Weapons/Weapons";
 import StolenGoods from "./Components/Game-components/Stolen-goods/Stolen-goods";
+import Firewall from "./Components/Game-components/Firewall/Firewall";
+import Drugs from "./Components/Game-components/Drugs/Drugs";
 
 function App() {
   return (
@@ -19,6 +21,9 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/stolen" element={<StolenGoods/>}/>
         <Route path='/weapons' element={<Weapons/>}/>
+        <Route path='/firewall' element={<Firewall/>}/>
+        <Route path='/drugs' element={<Drugs/>}/>
+
       </Routes>
 
       
