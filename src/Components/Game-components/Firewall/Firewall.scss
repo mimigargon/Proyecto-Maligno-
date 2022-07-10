@@ -1,6 +1,6 @@
 
   
-  #game {
+  .game {
   cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur7.cur), auto;
     position: relative;
     width: 1000px;
@@ -12,8 +12,8 @@
             transform: perspective(200px) rotateX(15deg) translateY(-90px);
   }
 
-  #gameover,
-  #win {
+  .gameover,
+  .win {
     background-image: url("https://www.quecursar.com/wp-content/uploads/2016/04/beneficios-del-hacking-etico.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,11 +24,11 @@
     width: 100%;
   }
   
-  #gameover {
+  .gameover {
     display: none;
     background: tomato;
   }
-  #win {
+  .win {
     opacity: 0;
     pointer-events: none;
   }
@@ -51,31 +51,31 @@
     -webkit-clip-path: polygon(25% 0, 100% 0, 100% 100%, 60% 100%, 44% 81%, 70% 60%,57% 44%, 65% 35%,  40% 15%);
   }
   
-  #game:hover .wall-left,
-  #game:hover .wall-right {
+  .game:hover .wall-left,
+  .game:hover .wall-right {
     -webkit-animation: wallScroll 10s ease-in forwards;
             animation: wallScroll 10s ease-in forwards;
   }
-  #game:hover #win {
+  .game:hover .win {
     -webkit-animation: win 10s linear forwards;
             animation: win 10s linear forwards;
   }
   
-  #game:hover #start-spot {
+  .game:hover .start-spot {
     display: none;
   }
   
-  .wall-left:hover ~ #gameover,
-  .wall-right:hover ~ #gameover,
-  #gameover:hover {
+  .wall-left:hover ~ .gameover,
+  .wall-right:hover ~ .gameover,
+  .gameover:hover {
     display: block;
     z-index: 1;
   }
   
   
   /* Quelques styles pour la forme */
-  #gameover h1,
-  #win h1 {
+  .gameover h1,
+  .win h1 {
     position: absolute;
     top: 50%;
     left: 50%;
