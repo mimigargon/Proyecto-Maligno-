@@ -1,10 +1,15 @@
 import React from "react";
 import "./Weapons.scss";
 import disk from "../../../images/harddisk.png";
-import Magnifier from "react-magnifier";
+
+import sable from "../../../images/sable.png";
+import gun1 from "../../../images/gun1.png";
+import gun2 from "../../../images/gun2.png";
+import gun3 from "../../../images/gun3.png";
+import gun4 from "../../../images/gun4.png";
 import Swal from "sweetalert2";
-import styled from "styled-components";
-/* import computer from "../../../images/computer.gif"; */
+import Clue from "../Clue/Clue";
+
 
 //Este componente de armas consiste en una habitación como si fuera de una armería
 //en la que tienes que encontrar la pista con una linterna y la luz apagada.
@@ -17,17 +22,6 @@ import styled from "styled-components";
   return message;
 } */
 
-const BackgroundWeapon = styled.body`
-  position: relative;
-  height: 100vh;
-  background-color: #fff;
-  cursor: url("../../../images/linternacursor.png"), auto;
-  background-image: url("../../../../src/images/cyberweapons.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50%;
-`;
-
 const Weapons = () => {
   document.addEventListener("mousemove", (e) => {
     const x = e.clientX;
@@ -38,26 +32,89 @@ const Weapons = () => {
 
   const showAlert = () => {
     Swal.fire({
-      title: "¡Conseguido! has encontrado una contraseña",
+      title: "¡Conseguido! has encontrado parte de la contraseña",
       color: "#ffffff",
+      confirmButtonColor: '#3085d6',
       background:
         'url("https://c.tenor.com/-SV9TjUGabMAAAAC/hacker-python.gif") no-repeat',
+    }).then((result) => {
+      /* Read more about handling dismissals below */
+      if (result.isConfirmed) {
+        console.log("confirmado");
+      }
+    });
+  };
+
+  const showAlertError = () => {
+    let timerInterval;
+    Swal.fire({
+      title: "3RR0R 404: P455W0RD N0T F0UND",
+      color: "#ffffff",
+      html: "Esta ventana se autodestruirá en <b></b> milisegundos.",
+      timer: 3000,
+      background:
+        'url("https://i.pinimg.com/originals/e2/ca/51/e2ca511664a6f9cf2c5d9f92328534ae.gif") no-repeat',
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading();
+        const b = Swal.getHtmlContainer().querySelector("b");
+        timerInterval = setInterval(() => {
+          b.textContent = Swal.getTimerLeft();
+        }, 100);
+      },
+      willClose: () => {
+        clearInterval(timerInterval);
+      },
+    }).then((result) => {
+      /* Read more about handling dismissals below */
+      if (result.dismiss === Swal.DismissReason.timer) {
+        console.log("I was closed by the timer");
+      }
     });
   };
 
   return (
-    <BackgroundWeapon>
-      <div className="light">
-        <div className="diskContainer">
-          <Magnifier
-            onClick={() => showAlert()}
-            className="disk"
-            src={disk}
-            width={200}
-          />
-        </div>
-      </div>
-    </BackgroundWeapon>
+
+    <div className="lightContainer">
+      <Clue
+        onClick={() => showAlert()}
+        className="disk"
+        src={disk}
+        width={200}
+      />
+      <Clue
+        onClick={() => showAlertError()}
+        className="sable"
+        src={sable}
+        width={200}
+      />
+      <Clue
+        onClick={() => showAlertError()}
+        className="gun1"
+        src={gun1}
+        width={200}
+      />
+      <Clue
+        onClick={() => showAlertError()}
+        className="gun2"
+        src={gun2}
+        width={200}
+      />
+      <Clue
+        onClick={() => showAlertError()}
+        className="gun3"
+        src={gun3}
+        width={200}
+      />
+      <Clue
+        onClick={() => showAlertError()}
+        className="gun4"
+        src={gun4}
+        width={200}
+      />
+      <div className="light"></div>
+    </div>
+
   );
 };
 
