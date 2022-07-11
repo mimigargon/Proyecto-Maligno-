@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Drugs.scss"
 import Swal from "sweetalert2";
+
 
 const Drugs = () => {
   const [drugs, setDrugs] = useState([]);
@@ -33,13 +35,19 @@ const Drugs = () => {
   const text = {
 	color:" rgba(12, 128, 8, 0.8)"
   };
- 
+
+  let navigation = useNavigate();
   const alert = () => {
 	  Swal.fire(
 		'Has encontrado la pista!',
 		'Buen trabajo',
 		'success'
-	  )
+	  ).then((result) => {
+      if (result.isConfirmed) {
+        navigation('/main');
+        console.log("confirmado");
+      }
+    });
   }
 
 

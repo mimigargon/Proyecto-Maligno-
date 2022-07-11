@@ -34,7 +34,7 @@ const FakeNews = () => {
   }
   
   const showAlertDiscord = () => {
-    Swal.fire('M4LIGN0 DICE: ""');
+    Swal.fire('M4LIGN0 DICE: *No hay nadie conectado*');
   }
 
   const showAlertTwitch = () => {
@@ -42,7 +42,7 @@ const FakeNews = () => {
   }
 
   const showAlertGoogle = () => {
-    Swal.fire('M4LIGN0 DICE: ""');
+    Swal.fire('M4LIGN0 DICE: "No vas a encontrar la solución aquí."');
   }
 
   const showAlertFacebook = () => {
@@ -58,7 +58,7 @@ const FakeNews = () => {
   }
 
   const showAlertChrome = () => {
-    Swal.fire('M4LIGN0 DICE: ""');
+    Swal.fire('M4LIGN0 DICE: "No hay nada que ver por aquí."');
   }
 
   const showAlertSpotify = () => {
@@ -66,15 +66,15 @@ const FakeNews = () => {
   }
 
   const showAlertTwitter = () => {
-    Swal.fire('M4LIGN0 DICE: "#TeamMaligno"');
+    Swal.fire('M4LIGN0 DICE: "#Team4RCH4N63L"');
   }
 
   const showAlertWeather = () => {
-    Swal.fire('M4LIGN0 DICE: ""');
+    Swal.fire('M4LIGN0 DICE: "Se prevee una buena tormenta de troyanos como no te des prisa."');
   }
 
   const showAlertSnapchat = () => {
-    Swal.fire('M4LIGN0 DICE: ""');
+    Swal.fire('M4LIGN0 DICE: "A nadie le interesa tu vida."');
   }
 
   const showAlertIncognito = () => {

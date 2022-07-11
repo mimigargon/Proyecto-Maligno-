@@ -1,6 +1,7 @@
 import React from "react";
 import "./Notepad.scss";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const Notepad = () => {
 	const showAlertError1 = () => {
@@ -35,12 +36,18 @@ const Notepad = () => {
 		})
 	  }
 
+    let navigation = useNavigate();
 	const showAlertSuccess = () => {
 		Swal.fire(
 			'¡Encontraste parte de la contraseña!',
 			'Y pensar que dentro de poco podrás atraparme con la mente...',
 			'success'
-		  )
+		  ).then((result) => {
+        if (result.isConfirmed) {
+          navigation('/main');
+          console.log("confirmado");
+        }
+      });
 	  }
 	
 	return (
