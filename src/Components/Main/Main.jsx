@@ -30,7 +30,7 @@ const Main = () => {
           <p>https://winwinsomecryptos.com</p>
         </Link>
       </div>
-      <div className="main-noteblock"></div>
+      <div className="main-notebook"></div>
     </div>
   );
 };

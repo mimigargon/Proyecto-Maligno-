@@ -1,5 +1,6 @@
 import React from "react";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 import laptop from "../../../images/laptop.png";
 import pastillas from "../../../images/pastillas.png";
 import computer from "../../../images/computer.png";
@@ -34,10 +35,16 @@ function StolenGoods() {
     const hole = randomHole(holes);
     pcOrNot = Math.floor(Math.random() * 2) + 1;
     hole.classList.add(pcOrNot === 1 ? "up" : "down");
-    setTimeout(() => {
+    const myTimeOut = setTimeout(() => {
       hole.classList.remove("up", "down");
-      if (!timeUp) peep();
+      if (!timeUp) {
+        peep() 
+      } 
     }, time);
+    if (score === 10) {
+      clearTimeout(myTimeOut);
+      clearInterval(counter);
+    }
   }
 
   function startGame() {
@@ -61,7 +68,8 @@ function StolenGoods() {
     Swal.fire({
       title: "¡Se acabó el tiempo!",
     });
-  }
+  };
+  
 
   function timer() {
     timeCounter = timeCounter - 1;
@@ -74,10 +82,16 @@ function StolenGoods() {
     }
   }
 
+  let navigation = useNavigate();
   function finishedGame() {
     if (score === 10) {
       Swal.fire({
         title: "¡Has descifrado parte de las credenciales!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigation('/main');
+          console.log("confirmado");
+        }
       });
 
       
