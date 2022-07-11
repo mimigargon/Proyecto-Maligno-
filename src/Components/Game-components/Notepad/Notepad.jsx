@@ -59,6 +59,7 @@ const Notepad = () => {
               <img
                 src="https://www.pngkey.com/png/full/142-1426797_download-count-windows-95-icon-png.png"
                 alt="notepad icon"
+                className="bloc"
               />
             </div>
             <div className="notepad-title">Programs - Notepad</div>

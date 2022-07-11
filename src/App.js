@@ -11,6 +11,7 @@ import StolenGoods from "./Components/Game-components/Stolen-goods/Stolen-goods"
 import Firewall from "./Components/Game-components/Firewall/Firewall";
 import Drugs from "./Components/Game-components/Drugs/Drugs";
 import About from "./Components/About-us/About";
+import Maligno from "./Components/Maligno/Maligno";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/drugs' element={<Drugs/>}/>
         <Route path='/fake-news' element={<FakeNews/>}/>
         <Route path='/about' element={<About/>}/>
+        <Route path='/maligno' element={<Maligno/>}/>
       </Routes>
 
       
