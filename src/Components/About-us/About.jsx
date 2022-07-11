@@ -6,9 +6,9 @@ import './About.scss';
 const About = () => {
   return (
     <div className="aboutContainer">
-        <video autoplay muted loop className="myVideo">
+        {/* <video autoplay muted loop className="myVideo">
   <source src="https://player.vimeo.com/video/184226801?h=5c4fa956bf" type="video/mp4"/>
-</video>
+</video> */}
       <div className="aboutConsole">
   <div className="top"> <span className="options">⦿ ○ ○</span> <span className="title">ABOUT US APP</span></div>
   <div className="tabs"> </div>
