@@ -3,8 +3,8 @@ import "./Login.scss";
 
 const Login = () => {
   return (
-    <div>
-    <h1>LOGIN</h1>
+    <div className="login-container">
+    <p>LOGIN</p>
       <form>
         <label>
         <span>USERNAME</span>
@@ -12,9 +12,9 @@ const Login = () => {
         </label>
         <label>
           <span>PASSWORD</span>
-          <input type="text" name="password"></input>
+          <input type="password" name="password"></input>
         </label>
-        <button type="submit">ACCEDER</button>
+        <button type="submit" className="submit-btn">ACCEDER</button>
       </form>
     </div>
   )
