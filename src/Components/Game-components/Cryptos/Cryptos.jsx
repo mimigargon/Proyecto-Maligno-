@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import './Cryptos.scss';
 import Card from './Card';
 import Swal from 'sweetalert2';
+import './Cryptos.scss';
 
 
 
@@ -14,7 +14,7 @@ const cardImages = [
   {"src" : "../../../img/Monero-icon.png", matched:false},
 ]
 
-function App() {
+function Cryptos() {
   
   const [cards, setCards] = useState([])
   const [turns, setTurns] = useState(0)
@@ -82,9 +82,9 @@ function finishGame(){
   }, [])
 
   return (
-    <div className="App">
+    <div className="cryptos-container">
       <h1>Crypto Match</h1>
-      <button onClick={shuffleCards}>New Game</button>
+      <button className='cryptos-btn' onClick={shuffleCards}>New Game</button>
 
       <div className="card-grid">
         {cards.map(card => (
@@ -103,5 +103,5 @@ function finishGame(){
   );
 }
 
-export default App
+export default Cryptos
 
