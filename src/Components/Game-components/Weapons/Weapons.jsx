@@ -40,6 +40,8 @@ const Weapons = () => {
     }).then((result) => {
       /* Read more about handling dismissals below */
       if (result.isConfirmed) {
+        //Aquí quiero redireccionar a Main cuando se haga click en OK
+        //Swal.clickConfirm()
         console.log("confirmado");
       }
     });
