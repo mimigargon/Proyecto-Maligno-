@@ -4,12 +4,12 @@ import Card from './Card';
 
 
 const cardImages = [
-  {"src" : "../../../images/Bitcoin.png", matched:false},
-  {"src" : "../../../images/Tether.png", matched:false},
-  {"src" : "../../../images/Dash-icon.png", matched:false},
-  {"src" : "../../../images/Dogecoin-icon.png", matched:false},
-  {"src" : "../../../images/EOS-icon.png", matched:false},
-  {"src" : "../../../images/Monero-icon.png", matched:false},
+  {"src" : "../../../img/Bitcoin.png", matched:false},
+  {"src" : "../../../img/Tether.png", matched:false},
+  {"src" : "../../../img/Dash-icon.png", matched:false},
+  {"src" : "../../../img/Dogecoin-icon.png", matched:false},
+  {"src" : "../../../img/EOS-icon.png", matched:false},
+  {"src" : "../../../img/Monero-icon.png", matched:false},
 ]
 
 function App() {
