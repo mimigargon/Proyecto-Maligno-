@@ -14,75 +14,75 @@ import {useState} from 'react';
 const FakeNews = () => {
   
   const showAlertInsta = () => {
-    Swal.fire('M4LIGN0 DICE: "No es momento para mirar fotos de gatitos"');
+    Swal.fire('4RCH4N63L DICE: "No es momento para mirar fotos de gatitos"');
   }
 
   const showAlertPrime = () => {
-    Swal.fire('M4LIGN0 DICE: "Ya tendrás tiempo para ver la última temporada de The Boys"');
+    Swal.fire('4RCH4N63L DICE: "Ya tendrás tiempo para ver la última temporada de The Boys"');
   }
 
   const showAlertApple = () => {
-    Swal.fire('M4LIGN0 DICE: "Ahora en serio... ¿hay alguien que de verdad utilice Apple Music?"');
+    Swal.fire('4RCH4N63L DICE: "Ahora en serio... ¿hay alguien que de verdad utilice Apple Music?"');
   }
 
   const showAlertMessenger = () => {
-    Swal.fire('M4LIGN0 DICE: "Ya podrás chatear más tarde."');
+    Swal.fire('4RCH4N63L DICE: "Ya podrás chatear más tarde."');
   }
 
   const showAlertExplorer = () => {
-    Swal.fire('M4LIGN0 DICE: "Así que eres de esas personas que utilizan Internet Explorer en pleno siglo XXI"');
+    Swal.fire('4RCH4N63L DICE: "Así que eres de esas personas que utilizan Internet Explorer en pleno siglo XXI"');
   }
   
   const showAlertDiscord = () => {
-    Swal.fire('M4LIGN0 DICE: *No hay nadie conectado*');
+    Swal.fire('4RCH4N63L DICE: *No hay nadie conectado*');
   }
 
   const showAlertTwitch = () => {
-    Swal.fire('M4LIGN0 DICE: "No, ElRubius no está transmitiendo ahora mismo. Céntrate."');
+    Swal.fire('4RCH4N63L DICE: "No, ElRubius no está transmitiendo ahora mismo. Céntrate."');
   }
 
   const showAlertGoogle = () => {
-    Swal.fire('M4LIGN0 DICE: "No vas a encontrar la solución aquí."');
+    Swal.fire('4RCH4N63L DICE: "No vas a encontrar la solución aquí."');
   }
 
   const showAlertFacebook = () => {
-    Swal.fire('M4LIGN0 DICE: "Las fotos del viaje a Benidorm de tu tía pueden esperar."');
+    Swal.fire('4RCH4N63L DICE: "Las fotos del viaje a Benidorm de tu tía pueden esperar."');
   }
 
   const showAlertLinkedIn = () => {
-    Swal.fire('M4LIGN0 DICE: "No te engañes, nadie te va a contratar."');
+    Swal.fire('4RCH4N63L DICE: "No te engañes, nadie te va a contratar."');
   }
 
   const showAlertTinder = () => {
-    Swal.fire('M4LIGN0 DICE: "...really?"');
+    Swal.fire('4RCH4N63L DICE: "...really?"');
   }
 
   const showAlertChrome = () => {
-    Swal.fire('M4LIGN0 DICE: "No hay nada que ver por aquí."');
+    Swal.fire('4RCH4N63L DICE: "No hay nada que ver por aquí."');
   }
 
   const showAlertSpotify = () => {
-    Swal.fire('M4LIGN0 DICE: "Todos sabemos que te gusta escuchar a Luis Miguel."');
+    Swal.fire('4RCH4N63L DICE: "Todos sabemos que te gusta escuchar a Luis Miguel."');
   }
 
   const showAlertTwitter = () => {
-    Swal.fire('M4LIGN0 DICE: "#Team4RCH4N63L"');
+    Swal.fire('4RCH4N63L DICE: "#Team4RCH4N63L"');
   }
 
   const showAlertWeather = () => {
-    Swal.fire('M4LIGN0 DICE: "Se prevee una buena tormenta de troyanos como no te des prisa."');
+    Swal.fire('4RCH4N63L DICE: "Se prevee una buena tormenta de troyanos como no te des prisa."');
   }
 
   const showAlertSnapchat = () => {
-    Swal.fire('M4LIGN0 DICE: "A nadie le interesa tu vida."');
+    Swal.fire('4RCH4N63L DICE: "A nadie le interesa tu vida."');
   }
 
   const showAlertIncognito = () => {
-    Swal.fire('M4LIGN0 DICE: "¿Qué pretendes buscar aquí, eh pillín?"');
+    Swal.fire('4RCH4N63L DICE: "¿Qué pretendes buscar aquí, eh pillín?"');
   }
 
   const showAlertYouTube = () => {
-    Swal.fire('M4LIGN0 DICE: "Ningún videotutorial podrá ayudarte a atrapar a Maligno."');
+    Swal.fire('4RCH4N63L DICE: "Ningún videotutorial podrá ayudarte a atrapar a Maligno."');
   }
   
   
