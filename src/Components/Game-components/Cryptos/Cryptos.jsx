@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import './Cryptos.scss';
 import Card from './Card';
+import Swal from 'sweetalert2';
+
 
 
 const cardImages = [
@@ -34,7 +36,6 @@ function App() {
 
   // handle a choice
   const handleChoice = (card) => {
-    console.log(card)
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
   }
 
@@ -57,7 +58,6 @@ function App() {
       } else {
         setTimeout(() => resetTurn(), 1000)
       }
-
     }
   }, [choiceOne, choiceTwo])
 
@@ -69,6 +69,13 @@ function App() {
     setDisabled(false)
   }
 
+function finishGame(){
+  if ( cards.matched === true) {
+    Swal.fire({
+      title: "Descifraste parte de las credenciales",
+    });
+  }
+}
   // start new game auto
   useEffect(() => {
     shuffleCards()
@@ -76,7 +83,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Magic Match</h1>
+      <h1>Crypto Match</h1>
       <button onClick={shuffleCards}>New Game</button>
 
       <div className="card-grid">
