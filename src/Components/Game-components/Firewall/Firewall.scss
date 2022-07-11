@@ -1,7 +1,5 @@
 .fw-container{
 
-
-  
   .fw-game {
   cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur7.cur), auto;
     position: relative;
@@ -91,8 +89,7 @@
     z-index: 1;
   }
   
-  
-  /* Quelques styles pour la forme */
+
   .gameover h1,
   .win h1 {
     position: absolute;
@@ -106,7 +103,6 @@
     background-color: whitesmoke;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 30px;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: stretch;
