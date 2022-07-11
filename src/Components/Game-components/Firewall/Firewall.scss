@@ -35,6 +35,23 @@
     pointer-events: none;
   }
   
+  button{
+    pointer-events: all;
+    position:absolute ;
+    top:50%;
+    right: 45%;
+    font-family: monospace;
+    width: 145px;
+    height: wrap;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background-color: #ff4d4d;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+  }
   
   .wall-left,
   .wall-right {
