@@ -1,7 +1,7 @@
 import React from "react";
 import "./Weapons.scss";
+import { useNavigate } from "react-router-dom";
 import disk from "../../../images/harddisk.png";
-
 import sable from "../../../images/sable.png";
 import gun1 from "../../../images/gun1.png";
 import gun2 from "../../../images/gun2.png";
@@ -23,6 +23,7 @@ import Clue from "../Clue/Clue";
 } */
 
 const Weapons = () => {
+
   document.addEventListener("mousemove", (e) => {
     const x = e.clientX;
     const y = e.clientY;
@@ -30,6 +31,8 @@ const Weapons = () => {
     light.style.background = `radial-gradient(circle at ${x}px ${y}px, transparent 0%, #000 15%)`;
   });
 
+
+  let navigation = useNavigate();
   const showAlert = () => {
     Swal.fire({
       title: "¡Conseguido! has encontrado parte de la contraseña",
@@ -38,10 +41,9 @@ const Weapons = () => {
       background:
         'url("https://c.tenor.com/-SV9TjUGabMAAAAC/hacker-python.gif") no-repeat',
     }).then((result) => {
-      /* Read more about handling dismissals below */
       if (result.isConfirmed) {
-        //Aquí quiero redireccionar a Main cuando se haga click en OK
-        //Swal.clickConfirm()
+        //Aquí quiero redireccionar a Main cuando se haga click en OK y guardar la contraseña en Main (dispatch a redux y un navigate)
+        navigation('/main');
         console.log("confirmado");
       }
     });
