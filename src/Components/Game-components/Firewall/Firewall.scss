@@ -1,7 +1,5 @@
 .fw-container{
 
-
-  
   .fw-game {
   cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur7.cur), auto;
     position: relative;
@@ -102,11 +100,9 @@
             transform: translate3d(-50%, -50%, 0);
   }
   .instructions {
-    padding: 30px;
     background-color: whitesmoke;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 30px;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: stretch;
