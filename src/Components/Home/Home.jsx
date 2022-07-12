@@ -15,7 +15,7 @@ const Home = () => {
             <div className="p">
               El contenido de este juego es una simulación.
             </div>
-            <div className="p">Recomendado para mayores de edad.</div>
+            <div className="p">No recomendado para menores de edad.</div>
           </div>
           <div>
             <div>
