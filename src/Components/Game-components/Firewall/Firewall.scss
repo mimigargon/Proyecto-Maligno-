@@ -14,7 +14,8 @@
 
   .gameover,
   .win {
-    background-image: url("https://www.quecursar.com/wp-content/uploads/2016/04/beneficios-del-hacking-etico.jpg");
+    background-image: url("https://www.tesselar.mx/hubfs/Imported%20sitepage%20images/Portada_blog_hacking_detected.jpg");
+    background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
@@ -26,7 +27,8 @@
   
   .gameover {
     display: none;
-    background: tomato;
+    background-image: url("https://1.bp.blogspot.com/-RBSX-0ZNMCE/Vu78SsQ8naI/AAAAAAAAFLc/9WfURgI9-UA2J6l_wEcYV0LVnM1fS7Zag/s1600/brick-cool-game-over-wallpapers.jpg");
+    background-position: 50%;
   }
   .win {
     opacity: 0;
@@ -37,15 +39,15 @@
     pointer-events: all;
     position:absolute ;
     top:50%;
-    right: 45%;
+    right: 40%;
     font-family: monospace;
     width: 145px;
-    height: wrap;
+    height: 60px;
     text-transform: uppercase;
     letter-spacing: 4px;
-    background-color: #ff4d4d;
+    background-color:rgba(255, 255, 255, 0.61);
     border: 2px solid whitesmoke;
-    color: whitesmoke;
+    color: black;
     border-radius: 20px;
     font-size: 20px;
     cursor: pointer;

@@ -21,7 +21,6 @@ function Firewall() {
         //Aquí quiero redireccionar a Main cuando se haga click en OK y guardar la contraseña en Main (dispatch a redux y un navigate)
         const cb = () => navigate("/main");
         dispatch(storeFirewallPass(cb))
-        console.log("confirmado");
       }
     });
   };
@@ -38,7 +37,7 @@ function Firewall() {
      
     <div className="wall-left"></div>
     <div className="wall-right"></div>
-    <div className="gameover"><h1>You lose</h1></div>
+    <div className="gameover"></div>
     <div className="win"><button onClick={showAlert}>volver a main</button></div> 
   </div>
     <p className="fw-start">INICIO</p>

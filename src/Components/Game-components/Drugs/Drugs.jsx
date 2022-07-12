@@ -151,8 +151,8 @@ const Drugs = () => {
               12/04/2019
             </div>
             <div class="returnPolicy">
-              <div class="detail">October 5, 2019</div>
-              <div class="detail">10:16 AM</div>
+              <div class="detail">{Date()}</div>
+            
             </div>
             <div class="tripSummary">
               <div class="bold">Trip Summary:</div>
@@ -173,8 +173,6 @@ const Drugs = () => {
               </p>
               <h3 class="clickBait">Share Your Feedback</h3>
               <h4 class="web">www.CVSHealthSurvey.com</h4>
-              <p class="center">Hablamos español</p>
-              <div class="break">***************************</div>
             </div>
             <div id="coupons" class="coupons">
               <div class="couponContainer">
