@@ -1,5 +1,7 @@
 $paper-color: #F1EDE9;
 $paper-line: #94ACD4;
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+
 
 .blocContainer {
   width: 100%;
@@ -30,7 +32,7 @@ $paper-line: #94ACD4;
     min-height: 100px;
     padding: 35px 20px;
     background: repeating-linear-gradient($paper-color, $paper-color 31px, $paper-line 31px, $paper-line 32px);
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Rajdhani', sans-serif;
     line-height: 32px;
     outline: 0;
     font-size: 22px;
