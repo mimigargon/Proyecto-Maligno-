@@ -38,7 +38,7 @@ const Main = () => {
     <div class="blocnotas">
   <div class="top"></div>
   <div class="paper" contenteditable="true">
-  {passObj.weapon && <span>{passObj.weapon}</span>}
+  {passObj.weapon && <span><u>{passObj.weapon}</u></span>}
   {passObj.drug && <span>{passObj.drug}</span>}
   {passObj.stolengoods && <span>{passObj.stolengoods}</span>}
   {passObj.firewall && <span>{passObj.firewall}</span>}
