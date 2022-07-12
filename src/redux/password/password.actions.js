@@ -4,6 +4,7 @@ export const STORE_STOLEN_PASS = "STORE_STOLEN_PASS";
 export const STORE_DRUGS_PASS = "STORE_DRUGS_PASS";
 export const STORE_FIREWALL_PASS = "STORE_FIREWALL_PASS";
 export const STORE_FAKENEWS_PASS = "STORE_FAKENEWS_PASS";
+export const STORE_CRYPTO_PASS = "STORE_CRYPTO_PASS"
 
 export const storeWeaponPass = (cb) => async (dispatch) => {
   try {
@@ -69,4 +70,17 @@ export const storeFakenewsPass = (cb) => async (dispatch) => {
     console.log("Error al guardar contraseña", error);
   }
 };
+
+export const storeCryptosPass = (cb) => async (dispatch) => {
+    try {
+      const password = await getPassword();
+      dispatch({
+        type: STORE_CRYPTO_PASS,
+        payload: password.crypto,
+      });
+      setTimeout(() => cb(), 500); 
+    } catch (error) {
+      console.log("Error al guardar contraseña", error);
+    }
+  };
 

@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { storeCryptosPass } from "../../../redux/password/password.actions";
 import Card from "./Card";
 import Swal from "sweetalert2";
 import "./Cryptos.scss";
-import { useNavigate } from "react-router-dom";
 
 const cardImages = [
   { src: "../../../img/Bitcoin-icon.png", matched: false },
@@ -14,6 +16,8 @@ const cardImages = [
 ];
 
 function Cryptos() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState();
   const [choiceOne, setChoiceOne] = useState(null);
@@ -71,7 +75,6 @@ function Cryptos() {
 
   };
 
-  let navigation = useNavigate();
   const finishGame = () => {
     Swal.fire({
       title: "Descifraste parte de las credenciales",
@@ -81,7 +84,8 @@ function Cryptos() {
       'url("https://c.tenor.com/-SV9TjUGabMAAAAC/hacker-python.gif") no-repeat',
     }).then((result) => {
       if(result.isConfirmed) {
-        navigation('/main');
+        const cb = () => navigate("/main");
+        dispatch(storeCryptosPass(cb))
         console.log("confirmado");
       }
     })
