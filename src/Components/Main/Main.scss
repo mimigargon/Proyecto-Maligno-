@@ -40,6 +40,10 @@
     font-size: 20px;
   }
 
+  .rowContainer{
+    display: flex;
+    flex-direction: row;
+  }
   .main-links {
     border: 7px solid #ff4d4d;
     background-color: #00000060;
@@ -57,11 +61,13 @@
     }
   }
 
-  .main-notebook {
-    border: 7px solid #ff4d4d;
-    background-color: #00000060;
-  }
+  
 }
+
+/* .main-notebook {
+  border: 7px solid #ff4d4d;
+  background-color: #00000060;
+} */
 
 @keyframes glitch {
   0% {

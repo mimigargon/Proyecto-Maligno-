@@ -12,6 +12,7 @@ import Firewall from "./Components/Game-components/Firewall/Firewall";
 import Drugs from "./Components/Game-components/Drugs/Drugs";
 import About from "./Components/About-us/About";
 import Maligno from "./Components/Maligno/Maligno";
+import Bloc from "./Components/Bloc/Bloc";
 import "./App.scss";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path='/fake-news' element={<FakeNews/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/maligno' element={<Maligno/>}/>
+        <Route path='/bloc' element={<Bloc/>}/>
       </Routes>
 
       

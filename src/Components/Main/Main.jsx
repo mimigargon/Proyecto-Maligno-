@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Main.scss";
+import Bloc from "../Bloc/Bloc";
 
 const Main = () => {
   return (
@@ -10,6 +11,7 @@ const Main = () => {
       </Link>
       <span>SEARCH</span>
       <input type="text" className="main-input"></input>
+      <div className="rowContainer">
       <div className="main-links">
         <Link to={"/stolen"}>
           <p>https://stolenobjects.com</p>
@@ -30,8 +32,10 @@ const Main = () => {
           <p>https://winwinsomecryptos.com</p>
         </Link>
       </div>
-      <div className="main-notebook"></div>
+      <div className="main-notebook"><Bloc/></div>
     </div>
+</div>
+    //flex-direction row para un contenedor de main-links y main-notebook
   );
 };
 
