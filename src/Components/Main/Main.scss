@@ -2,9 +2,7 @@
 
 .main-container {
   background-color: #1a0000;
-  color: #ff4d4d;
-  font-family: monospace;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,13 +29,6 @@
     color:#ff4d4d;
     font-size: 100px;
     margin-bottom: 10px;
-  }
-
-  .main-input {
-    width: 650px;
-    height: 30px;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 20px;
   }
 
   .rowContainer{

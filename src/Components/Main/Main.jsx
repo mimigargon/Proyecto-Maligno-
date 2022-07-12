@@ -10,8 +10,6 @@ const Main = () => {
       <Link to={"/login"}>
         <button className="main-btn">LOGIN</button>
       </Link>
-      <h1>SEARCH</h1>
-      <input type="text" className="main-input"></input>
       <div className="rowContainer">
       <div className="main-links">
         <Link to={"/stolen"}>

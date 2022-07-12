@@ -28,9 +28,6 @@ const Home = () => {
         <Link to={"/game-info"}>
           <button className="home-btn">START</button>
         </Link>
-        <Link to={"/login"}>
-          <button className="home-btn">LOGIN</button>
-        </Link>
       </div>
     </div>
   );
