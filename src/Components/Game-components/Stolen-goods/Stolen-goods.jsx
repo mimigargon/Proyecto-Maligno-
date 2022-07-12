@@ -91,7 +91,11 @@ function StolenGoods() {
   function finishedGame() {
     if (score === 10) {
       Swal.fire({
-        title: "¡Has descifrado parte de las credenciales!",
+        title: '¡Encontraste parte de la contraseña!Y pensar que dentro de poco podrás atraparme con la mente...',
+      color: "#f1f1f1d1",
+      confirmButtonColor: '#222',
+      background:
+        'url("https://c.tenor.com/-SV9TjUGabMAAAAC/hacker-python.gif") no-repeat',
       }).then((result) => {
         if (result.isConfirmed) {
           const cb = () => navigate("/main");
