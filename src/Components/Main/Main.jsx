@@ -3,6 +3,25 @@ import { Link } from "react-router-dom";
 import "./Main.scss";
 import { useSelector } from "react-redux";
 
+
+let blackBackground = [
+  "font-size: 50px",
+  "background: rgb(131,58,180);",
+  "background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);",
+].join(" ;");
+
+let whiteBackground = [
+  "font-size: 50px",
+  "background: rgb(131,58,180);",
+  "background: linear-gradient(90deg, rgba(131,58,180,1) 44%, rgba(253,29,29,1) 70%, rgba(252,176,69,1) 100%);",
+].join(" ;");
+
+console.log(
+  "%cM4L16N0 WAS HERE %cAND CRYPTED THE PAGE",
+  blackBackground,
+  whiteBackground
+);
+
 const Main = () => {
   const passObj = useSelector(state => state.password.passObj);
   return (
@@ -47,6 +66,7 @@ const Main = () => {
   {passObj.crypto && <span><b>{passObj.crypto}</b></span>}
   {passObj.fakenews && <span><b>{passObj.fakenews}</b></span>}
   </div>
+  
 </div>
     </div>
       </div>
