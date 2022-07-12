@@ -36,15 +36,18 @@ const Main = () => {
       <div className="main-notebook">
       <div className="blocContainer">
     <div class="blocnotas">
-  <div class="top"></div>
+  <div class="top">
+ 
+  </div>
   <div class="paper" contenteditable="true">
-  {passObj.weapon && <span><u>{passObj.weapon}</u></span>}
-  {passObj.drug && <span>{passObj.drug}</span>}
-  {passObj.stolengoods && <span>{passObj.stolengoods}</span>}
-  {passObj.firewall && <span>{passObj.firewall}</span>}
-  {passObj.crypto && <span>{passObj.crypto}</span>}
-  {passObj.fakenews && <span>{passObj.fakenews}</span>}
-  
+  <p>Aquí se guardará la contraseña a medida que vayas desencriptando las pistas en cada página web.</p>
+  <span>Password: </span>
+  {passObj.weapon && <span><b>{passObj.weapon}</b></span>}
+  {passObj.drug && <span><b>{passObj.drug}</b></span>}
+  {passObj.stolengoods && <span><b>{passObj.stolengoods}</b></span>}
+  {passObj.firewall && <span><b>{passObj.firewall}</b></span>}
+  {passObj.crypto && <span><b>{passObj.crypto}</b></span>}
+  {passObj.fakenews && <span><b>{passObj.fakenews}</b></span>}
   </div>
 </div>
     </div>
