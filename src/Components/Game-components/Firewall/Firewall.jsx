@@ -1,11 +1,14 @@
 import React from 'react'
 import "./Firewall.scss"
 import { useNavigate } from 'react-router';
+import { useDispatch } from "react-redux";
+import { storeFirewallPass } from "../../../redux/password/password.actions";
 import Swal from 'sweetalert2';
 
 function Firewall() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  let navigation = useNavigate();
   const showAlert = () => {
     Swal.fire({
       title: "¡Conseguido! has encontrado parte de la contraseña",
@@ -16,7 +19,8 @@ function Firewall() {
     }).then((result) => {
       if (result.isConfirmed) {
         //Aquí quiero redireccionar a Main cuando se haga click en OK y guardar la contraseña en Main (dispatch a redux y un navigate)
-        navigation('/main');
+        const cb = () => navigate("/main");
+        dispatch(storeFirewallPass(cb))
         console.log("confirmado");
       }
     });

@@ -42,7 +42,6 @@ const Weapons = () => {
         'url("https://c.tenor.com/-SV9TjUGabMAAAAC/hacker-python.gif") no-repeat',
     }).then((result) => {
       if (result.isConfirmed) {
-        //Aquí quiero redireccionar a Main cuando se haga click en OK y guardar la contraseña en Main (dispatch a redux y un navigate)
         const cb = () => navigate("/main");
         dispatch(storeWeaponPass(cb))
         

@@ -1,6 +1,8 @@
 import React from "react";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { storeStolenPass } from "../../../redux/password/password.actions";
 import laptop from "../../../images/laptop.png";
 import pastillas from "../../../images/pastillas.png";
 import computer from "../../../images/computer.png";
@@ -10,6 +12,9 @@ import knife from "../../../images/knife.png";
 import "./Stolen-goods.scss";
 
 function StolenGoods() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   let lastHole;
   let pcOrNot;
   let timeUp = false;
@@ -82,21 +87,20 @@ function StolenGoods() {
     }
   }
 
-  let navigation = useNavigate();
+
   function finishedGame() {
     if (score === 10) {
       Swal.fire({
-        title: '¡Has descifrado parte de las credenciales!',
-        color: "#f1f1f1d1",
-        confirmButtonColor: '#222',
-        background:
-          'url("https://c.tenor.com/-SV9TjUGabMAAAAC/hacker-python.gif") no-repeat',
+        title: "¡Has descifrado parte de las credenciales!",
       }).then((result) => {
-          if (result.isConfirmed) {
-            navigation('/main');
-            console.log("confirmado");
-          }
-        });
+        if (result.isConfirmed) {
+          const cb = () => navigate("/main");
+          dispatch(storeStolenPass(cb))
+          console.log("confirmado");
+        }
+      });
+
+      
     }
   }
 

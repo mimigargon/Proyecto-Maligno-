@@ -36,7 +36,7 @@ const getPassword = async () => {
         const pass5
         const pass6 */
 
-    console.log("resultados", res);
+/*     console.log("resultados", res); */
   } catch (error) {
     console.log("Error en petición", error);
   }

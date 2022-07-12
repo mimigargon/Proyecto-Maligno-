@@ -1,7 +1,7 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./Main.scss";
+import { useSelector } from "react-redux";
 
 const Main = () => {
   const passObj = useSelector(state => state.password.passObj);
@@ -10,8 +10,9 @@ const Main = () => {
       <Link to={"/login"}>
         <button className="main-btn">LOGIN</button>
       </Link>
-      <span>SEARCH</span>
+      <h1>SEARCH</h1>
       <input type="text" className="main-input"></input>
+      <div className="rowContainer">
       <div className="main-links">
         <Link to={"/stolen"}>
           <p>https://stolenobjects.com</p>
@@ -33,9 +34,24 @@ const Main = () => {
         </Link>
       </div>
       <div className="main-notebook">
-        {passObj.weapon && <p>{passObj.weapon}</p>}
+      <div className="blocContainer">
+    <div class="blocnotas">
+  <div class="top"></div>
+  <div class="paper" contenteditable="true">
+  {passObj.weapon && <span>{passObj.weapon}</span>}
+  {passObj.drug && <span>{passObj.drug}</span>}
+  {passObj.stolengoods && <span>{passObj.stolengoods}</span>}
+  {passObj.firewall && <span>{passObj.firewall}</span>}
+  {passObj.crypto && <span>{passObj.crypto}</span>}
+  {passObj.fakenews && <span>{passObj.fakenews}</span>}
+  
+  </div>
+</div>
+    </div>
       </div>
     </div>
+</div>
+    //flex-direction row para un contenedor de main-links y main-notebook
   );
 };
 

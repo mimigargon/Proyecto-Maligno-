@@ -26,7 +26,7 @@
     animation: glitch 750ms infinite, scan 2s infinite;
   }
 
-  span {
+  h1 {
     font-family: 'elixia';
     color:#ff4d4d;
     font-size: 100px;
@@ -40,6 +40,10 @@
     font-size: 20px;
   }
 
+  .rowContainer{
+    display: flex;
+    flex-direction: row;
+  }
   .main-links {
     border: 7px solid #ff4d4d;
     background-color: #00000060;
@@ -57,11 +61,54 @@
     }
   }
 
-  .main-notebook {
-    border: 7px solid #ff4d4d;
-    background-color: #00000060;
+  .main-notebook{
+    $paper-color: #F1EDE9;
+$paper-line: #94ACD4;
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+
+
+.blocContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 30px;
+
+  .blocnotas {
+    width: 300px;
+    max-width: 600px;
+    box-shadow: 10px 10px 40px rgba(black, .15);
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+  }
+  
+  .top {
+    width: 100%;
+    height: 50px;
+    background: #333;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .paper {
+/*     width: 100%; */
+    height: 100%;
+    min-height: 100px;
+    padding: 35px 20px;
+    background: repeating-linear-gradient($paper-color, $paper-color 31px, $paper-line 31px, $paper-line 32px);
+    font-family: 'Rajdhani', sans-serif;
+    line-height: 32px;
+    outline: 0;
+    font-size: 22px;
   }
 }
+
+  }
+}
+
+/* .main-notebook {
+  border: 7px solid #ff4d4d;
+  background-color: #00000060;
+} */
 
 @keyframes glitch {
   0% {

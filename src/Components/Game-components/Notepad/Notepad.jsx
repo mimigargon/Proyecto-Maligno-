@@ -2,8 +2,13 @@ import React from "react";
 import "./Notepad.scss";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import { storeFakenewsPass } from "../../../redux/password/password.actions";
+import { useDispatch } from "react-redux";
 
 const Notepad = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
 	const showAlertError1 = () => {
 		Swal.fire({
 			icon: 'error',
@@ -36,7 +41,7 @@ const Notepad = () => {
 		})
 	  }
 
-    let navigation = useNavigate();
+
 	const showAlertSuccess = () => {
 		Swal.fire({
 			title: '¡Encontraste parte de la contraseña!Y pensar que dentro de poco podrás atraparme con la mente...',
@@ -46,7 +51,8 @@ const Notepad = () => {
         'url("https://c.tenor.com/-SV9TjUGabMAAAAC/hacker-python.gif") no-repeat',
     }).then((result) => {
         if (result.isConfirmed) {
-          navigation('/main');
+          const cb = () => navigate("/main");
+          dispatch(storeFakenewsPass(cb))
           console.log("confirmado");
         }
       });
