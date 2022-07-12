@@ -107,9 +107,6 @@ function Cryptos() {
       <div className="cryptos-description">
         Debes acertar todas las parejas de estas criptomonedas.
       </div>
-      <button className="cryptos-btn" onClick={shuffleCards}>
-        New Game
-      </button>
       <div className="card-grid">
         {cards.map((card) => (
           <Card
@@ -122,7 +119,7 @@ function Cryptos() {
         ))}
       </div>
 
-      <p>Turns: {turns}</p>
+      <p className="crypto-turns">Turns: {turns}</p>
     </div>
   );
 }
