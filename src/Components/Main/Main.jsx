@@ -27,16 +27,16 @@ const Main = () => {
   return (
     <div className="main-container">
         <div className="gameInfoContainer">
-          <p className="c1">
+          <p className="t1">
           Acabas de acceder a la Dark Web como usuario, tu objetivo es conseguir las credenciales de <span>4RCH4N63L</span>
           </p>
-          <p className="c2">
+          <p className="t2">
           para poder loguearte como administrador y, finalmente, borrar todo rastro que haya dejado por la red.
           </p>
-          <p className="c3">
+          <p className="t3">
           Las siguientes rutas te llevarán a distintos rincones oscuros en los que tendrás que desencriptar las pistas
           </p>
-          <p className="c4">
+          <p className="t4">
           para lograr estas contraseñas. Buena suerte.
           </p>
         </div>

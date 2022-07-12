@@ -23,7 +23,7 @@
           color: #c3c3c3;
           margin: 30px 0px 40px 30px;
           text-shadow: 1px 1px #fff;
-          animation: typing 6s steps(100, end) forwards;
+          animation: typingmain 6s steps(100, end) forwards;
 
           span {
               color:#ff4d4d;
@@ -32,27 +32,27 @@
 
       }
 
-      p.c1 {
+      p.t1 {
         width: 0;
         overflow: hidden;
         white-space: nowrap;
     }
 
-    p.c2 {
+    p.t2 {
         width: 0;
         overflow: hidden;
         white-space: nowrap;
         animation-delay: 6s;
     }
 
-    p.c3 {
+    p.t3 {
         width: 0;
         overflow: hidden;
         white-space: nowrap;
         animation-delay: 12s;
     }
 
-    p.c4 {
+    p.t4 {
         width: 0;
         overflow: hidden;
         white-space: nowrap;
@@ -259,5 +259,15 @@ $paper-line: #94ACD4;
   }
   100% {
     top: 0%;
+  }
+}
+
+@keyframes typingmain {
+  from {
+      width: 0;
+  }
+
+  to {
+      width: 100%;
   }
 }

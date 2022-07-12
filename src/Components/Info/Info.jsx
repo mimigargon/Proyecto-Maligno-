@@ -36,7 +36,7 @@ function Info() {
           link.href = "/main";
           const infoContainer = document.querySelector(".info-container");
           infoContainer.appendChild(link);
-        }, 30500)}
+        }, 23000)}
       
     </div>
   );
