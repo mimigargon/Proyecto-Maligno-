@@ -1,8 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./Main.scss";
 
 const Main = () => {
+  const passObj = useSelector(state => state.password.passObj);
   return (
     <div className="main-container">
       <Link to={"/login"}>
@@ -30,7 +32,9 @@ const Main = () => {
           <p>https://winwinsomecryptos.com</p>
         </Link>
       </div>
-      <div className="main-notebook"></div>
+      <div className="main-notebook">
+        {passObj.weapon && <p>{passObj.weapon}</p>}
+      </div>
     </div>
   );
 };

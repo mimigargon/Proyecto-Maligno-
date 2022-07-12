@@ -2,11 +2,11 @@
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 
-import weaponsReducer from "./weapons/weapon.reducer";
+import passwordReducer from "./password/password.reducer";
 
 
 const rootReducer = combineReducers({
-    weapons: weaponsReducer,
+    password: passwordReducer,
 });
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
