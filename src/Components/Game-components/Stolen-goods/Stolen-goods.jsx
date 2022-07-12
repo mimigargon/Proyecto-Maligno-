@@ -91,7 +91,7 @@ function StolenGoods() {
   function finishedGame() {
     if (score === 10) {
       Swal.fire({
-        title: '¡Encontraste parte de la contraseña!Y pensar que dentro de poco podrás atraparme con la mente...',
+        title: '¡Encontraste parte de la contraseña!',
       color: "#f1f1f1d1",
       confirmButtonColor: '#222',
       background:
