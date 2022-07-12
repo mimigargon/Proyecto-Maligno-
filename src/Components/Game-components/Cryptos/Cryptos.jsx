@@ -100,6 +100,9 @@ function Cryptos() {
   return (
     <div className="cryptos-container">
       <h1 className="cryptos-title">Crypto Match</h1>
+      <div className="cryptos-description">
+        Debes acertar todas las parejas de estas criptomonedas.
+      </div>
       <button className="cryptos-btn" onClick={shuffleCards}>
         New Game
       </button>
