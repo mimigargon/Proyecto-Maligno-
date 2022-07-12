@@ -33,11 +33,11 @@ const Main = () => {
       </div>
       <div className="main-notebook">
       <div className="blocContainer">
-    <div class="blocnotas">
-  <div class="top">
+    <div className="blocnotas">
+  <div className="top">
  
   </div>
-  <div class="paper" contenteditable="true">
+  <div className="paper" contenteditable="true">
   <p>Aquí se guardará la contraseña a medida que vayas desencriptando las pistas en cada página web.</p>
   <span>Password: </span>
   {passObj.weapon && <span><b>{passObj.weapon}</b></span>}

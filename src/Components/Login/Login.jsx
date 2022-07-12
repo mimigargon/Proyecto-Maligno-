@@ -1,23 +1,37 @@
-import React from 'react';
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { loginFormSubmit, loginFormChange } from "../../redux/auth/auth.actions";
 import "./Login.scss";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const loginForm = useSelector((state) => state.auth.loginForm);
+
+  const submitLogin = (ev) => {
+    ev.preventDefault();
+    const callback = () => navigate('/maligno');
+    dispatch(loginFormSubmit(callback));
+  }
   return (
     <div className="login-container">
-    <p>LOGIN</p>
-      <form>
+      <p>LOGIN</p>
+      <form onSubmit={submitLogin}>
         <label>
-        <span>USERNAME</span>
-        <input type="text" name="username"></input>
+          <span>USERNAME</span>
+          <input type="text" name="username" value={loginForm.username} onChange={(ev) => dispatch(loginFormChange(ev))}></input>
         </label>
         <label>
           <span>PASSWORD</span>
-          <input type="password" name="password"></input>
+          <input type="password" name="password" value={loginForm.password} onChange={(ev) => dispatch(loginFormChange(ev))}></input>
         </label>
-        <button type="submit" className="submit-btn">ACCEDER</button>
+        <button type="submit" className="submit-btn">
+          ACCEDER
+        </button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
