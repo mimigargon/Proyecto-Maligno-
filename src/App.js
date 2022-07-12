@@ -13,6 +13,7 @@ import Drugs from "./Components/Game-components/Drugs/Drugs";
 import About from "./Components/About-us/About";
 import Maligno from "./Components/Maligno/Maligno";
 import "./App.scss";
+import Cryptos from "./Components/Game-components/Cryptos/Cryptos";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path='/firewall' element={<Firewall/>}/>
         <Route path='/drugs' element={<Drugs/>}/>
         <Route path='/fake-news' element={<FakeNews/>}/>
+        <Route path='/cryptos' element={<Cryptos/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/maligno' element={<Maligno/>}/>
       </Routes>

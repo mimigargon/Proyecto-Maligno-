@@ -19,7 +19,6 @@ export const storeWeaponPass = (cb) => async (dispatch) => {
 };
 
 export const storeStolenPass = (cb) => async (dispatch) => {
-<<<<<<< HEAD
   try {
     const password = await getPassword();
     dispatch({
@@ -71,17 +70,3 @@ export const storeFakenewsPass = (cb) => async (dispatch) => {
   }
 };
 
-=======
-    try {
-        const password = await getPassword();
-        dispatch({
-          type: STORE_WEAPON_PASS,
-          payload: password.weapon,
-        });
-        setTimeout(() => cb(), 500); 
-      } catch (error) {
-        console.log("Error al guardar contraseña", error);
-      }
-    
-}
->>>>>>> 03df02d9737e4d2125773350056a7d5f634e8c26
