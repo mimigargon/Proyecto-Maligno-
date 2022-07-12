@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Card from "./Card";
 import Swal from "sweetalert2";
 import "./Cryptos.scss";
+import { useNavigate } from "react-router-dom";
 
 const cardImages = [
   { src: "../../../img/Bitcoin-icon.png", matched: false },
@@ -70,11 +71,20 @@ function Cryptos() {
 
   };
 
-
+  let navigation = useNavigate();
   const finishGame = () => {
     Swal.fire({
       title: "Descifraste parte de las credenciales",
-    });
+      color: "#f1f1f1d1",
+      confirmButtonColor: '#222',
+      background:
+      'url("https://c.tenor.com/-SV9TjUGabMAAAAC/hacker-python.gif") no-repeat',
+    }).then((result) => {
+      if(result.isConfirmed) {
+        navigation('/main');
+        console.log("confirmado");
+      }
+    })
   };
   // start new game auto
   useEffect(() => {
