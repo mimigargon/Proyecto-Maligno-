@@ -42,23 +42,21 @@
         padding: 0.25rem;
       }
     }
-  }
-  
-  .typewriter {
-    overflow: hidden;
-    width: fit-content;
-    white-space: nowrap;
-    border-right: 0.15em solid #eb7132;
-    animation: typing 3s steps(15, end), blink-caret 0.75s step-end infinite;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
+    .typewriter {
+      overflow: hidden;
+      width: fit-content;
+      white-space: nowrap;
+      border-right: 0.15em solid #eb7132;
+      animation: typing-about 3s steps(15, end), blink-caret 0.75s step-end infinite;
+    }
+    
+     /* The typing effect */
+  @keyframes typing-about {
     from {
       width: 0;
     }
     to {
-      width: 60%;
+      width: 28%;
     }
   }
   
@@ -72,3 +70,7 @@
       border-color: orange;
     }
   }
+  }
+  
+  
+ 

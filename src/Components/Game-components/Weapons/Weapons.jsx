@@ -36,8 +36,8 @@ const Weapons = () => {
   const showAlert = () => {
     Swal.fire({
       title: "¡Conseguido! has encontrado parte de la contraseña",
-      color: "#ffffff",
-      confirmButtonColor: '#3085d6',
+      color: "#f1f1f1d1",
+      confirmButtonColor: '#222',
       background:
         'url("https://c.tenor.com/-SV9TjUGabMAAAAC/hacker-python.gif") no-repeat',
     }).then((result) => {

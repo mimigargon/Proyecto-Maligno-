@@ -38,17 +38,20 @@ const Drugs = () => {
 
   let navigation = useNavigate();
   const alert = () => {
-	  Swal.fire(
-		'Has encontrado la pista!',
-		'Buen trabajo',
-		'success'
-	  ).then((result) => {
+	Swal.fire({
+		title: "¡Conseguido! has encontrado parte de la contraseña",
+		color: "#ffffff",
+		confirmButtonColor: '#222',
+		background:
+		  'url("https://c.tenor.com/-SV9TjUGabMAAAAC/hacker-python.gif") no-repeat',
+	}).then((result) => {
       if (result.isConfirmed) {
         navigation('/main');
         console.log("confirmado");
       }
     });
   }
+
 
 
   return (
