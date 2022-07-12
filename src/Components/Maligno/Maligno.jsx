@@ -18,7 +18,7 @@ const Maligno = () => {
     <div className="text-center">
       <h1 className="archangelTitle">4RCH4N63L.exe</h1>
     </div>
-    <p>A fatal error 0x1337 has occurred at ./app.js:1. The current website will be terminated.</p>
+    <p>A fatal error 0x1337 has occurred at C:/User/4RCH4N63L/Documents/d4rkw3b5.js. The current website will be terminated.</p>
     <ul>
        <li><p>Are you sure you want to continue?</p></li>
     </ul>
