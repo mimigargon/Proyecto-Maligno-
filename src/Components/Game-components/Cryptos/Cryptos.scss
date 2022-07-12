@@ -2,9 +2,13 @@
     max-width: 860px;
     margin: 40px auto;
    
-
+    .cryptos-title {
+      padding: 20px ;
+      text-align: center;
+    }
     .cryptos-btn {
       margin-bottom: 52px;
+      margin-top: 10px;
       font-family: monospace;
       width: 145px;
       height: 40px;
@@ -16,7 +20,9 @@
       border-radius: 20px;
       font-size: 20px;
       cursor: pointer;
+      text-align: center;
     }
+    
 
     .card {
       position: relative;

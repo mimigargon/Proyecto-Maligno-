@@ -99,7 +99,7 @@ function Cryptos() {
 
   return (
     <div className="cryptos-container">
-      <h1>Crypto Match</h1>
+      <h1 className="cryptos-title">Crypto Match</h1>
       <button className="cryptos-btn" onClick={shuffleCards}>
         New Game
       </button>
