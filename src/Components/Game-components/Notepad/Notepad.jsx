@@ -38,18 +38,21 @@ const Notepad = () => {
 
     let navigation = useNavigate();
 	const showAlertSuccess = () => {
-		Swal.fire(
-			'¡Encontraste parte de la contraseña!',
-			'Y pensar que dentro de poco podrás atraparme con la mente...',
-			'success'
-		  ).then((result) => {
+		Swal.fire({
+			title: '¡Encontraste parte de la contraseña!Y pensar que dentro de poco podrás atraparme con la mente...',
+      color: "#f1f1f1d1",
+      confirmButtonColor: '#222',
+      background:
+        'url("https://c.tenor.com/-SV9TjUGabMAAAAC/hacker-python.gif") no-repeat',
+    }).then((result) => {
         if (result.isConfirmed) {
           navigation('/main');
           console.log("confirmado");
         }
       });
 	  }
-	
+
+
 	return (
     <>
       <div className="notepadContainer">
