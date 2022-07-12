@@ -1,93 +1,100 @@
-import { useEffect, useState } from 'react';
-import Card from './Card';
-import Swal from 'sweetalert2';
-import './Cryptos.scss';
-
-
+import { useEffect, useState } from "react";
+import Card from "./Card";
+import Swal from "sweetalert2";
+import "./Cryptos.scss";
 
 const cardImages = [
-  {"src" : "../../../img/Bitcoin-icon.png", matched:false},
-  {"src" : "../../../img/Tether-icon.png", matched:false},
-  {"src" : "../../../img/Dash-icon.png", matched:false},
-  {"src" : "../../../img/Dogecoin-icon.png", matched:false},
-  {"src" : "../../../img/EOS-icon.png", matched:false},
-  {"src" : "../../../img/Monero-icon.png", matched:false},
-]
+  { src: "../../../img/Bitcoin-icon.png", matched: false },
+  { src: "../../../img/Tether-icon.png", matched: false },
+  { src: "../../../img/Dash-icon.png", matched: false },
+  { src: "../../../img/Dogecoin-icon.png", matched: false },
+  { src: "../../../img/EOS-icon.png", matched: false },
+  { src: "../../../img/Monero-icon.png", matched: false },
+];
 
 function Cryptos() {
-  
-  const [cards, setCards] = useState([])
-  const [turns, setTurns] = useState(0)
-  const [choiceOne, setChoiceOne] = useState(null)
-  const [choiceTwo, setChoiceTwo] = useState(null)
-  const [disabled, setDisabled] = useState(false)
+  const [cards, setCards] = useState([]);
+  const [turns, setTurns] = useState();
+  const [choiceOne, setChoiceOne] = useState(null);
+  const [choiceTwo, setChoiceTwo] = useState(null);
+  const [disabled, setDisabled] = useState(false);
+  const [matchesNumber, setMatchesNumber] = useState(0);
 
   // shuffle cards for new game
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
       .sort(() => Math.random() - 0.5)
-      .map(card => ({ ...card, id: Math.random() }))
+      .map((card) => ({ ...card, id: Math.random() }));
 
-    setChoiceOne(null)
-    setChoiceTwo(null)
-    setCards(shuffledCards)
-    setTurns(0)
-  }
+    setChoiceOne(null);
+    setChoiceTwo(null);
+    setCards(shuffledCards);
+    setTurns(0);
+    // setTimeout(() => (finishGame()),35000)
+  };
 
   // handle a choice
   const handleChoice = (card) => {
-    choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
-  }
+    choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
+  };
 
   // compare 2 selected cards
   useEffect(() => {
     if (choiceOne && choiceTwo) {
-      setDisabled(true)
+      setDisabled(true);
 
       if (choiceOne.src === choiceTwo.src) {
-        setCards(prevCards => {
-          return prevCards.map(card => {
+        setCards((prevCards) => {
+          return prevCards.map((card) => {
             if (card.src === choiceOne.src) {
-              return { ...card, matched: true }
+              setMatchesNumber(matchesNumber +1)
+              return { ...card, matched: true };
             } else {
-              return card
+              return card;
             }
-          })
-        })
-        resetTurn()
+          });
+        });
+        resetTurn();
       } else {
-        setTimeout(() => resetTurn(), 1000)
+        setTimeout(() => resetTurn(), 1000);
       }
     }
-  }, [choiceOne, choiceTwo])
+  }, [choiceOne, choiceTwo]);
 
   // reset choices & increase turn
   const resetTurn = () => {
-    setChoiceOne(null)
-    setChoiceTwo(null)
-    setTurns(prevTurns => prevTurns + 1)
-    setDisabled(false)
-  }
+    setChoiceOne(null);
+    setChoiceTwo(null);
+    setTurns((prevTurns) => prevTurns + 1);
+    setDisabled(false);
 
-function finishGame(){
-  if ( cards.matched === true) {
+  };
+
+
+  const finishGame = () => {
     Swal.fire({
       title: "Descifraste parte de las credenciales",
     });
-  }
-}
+  };
   // start new game auto
   useEffect(() => {
-    shuffleCards()
-  }, [])
+    shuffleCards();
+  }, []);
+
+  useEffect( () => {
+    if(matchesNumber === 6){
+      finishGame();
+    }
+  }, [matchesNumber])
 
   return (
     <div className="cryptos-container">
       <h1>Crypto Match</h1>
-      <button className='cryptos-btn' onClick={shuffleCards}>New Game</button>
-
+      <button className="cryptos-btn" onClick={shuffleCards}>
+        New Game
+      </button>
       <div className="card-grid">
-        {cards.map(card => (
+        {cards.map((card) => (
           <Card
             key={card.id}
             card={card}
@@ -103,5 +110,4 @@ function finishGame(){
   );
 }
 
-export default Cryptos
-
+export default Cryptos;
