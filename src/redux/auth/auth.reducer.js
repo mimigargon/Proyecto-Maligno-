@@ -34,7 +34,10 @@ export const authReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         user: payload,
-        loginForm: [...initialFormState, false, true, false],
+        loginForm: [ {
+          username: "",
+          password: "",
+        }, false, true, false],
       };
     }
     case actions.LOGIN_USER_ERROR: {
