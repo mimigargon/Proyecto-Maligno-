@@ -3,10 +3,10 @@ import "./Maligno.scss"
 import { useNavigate } from "react-router-dom";
 
 const Maligno = () => {
-    let navigation = useNavigate();
+    const navigate = useNavigate();
     document.body.addEventListener("keydown", function (event) {
         if (event.key === "d") {
-            navigation('/about');
+            navigate('/about');
         }
     });
     return (

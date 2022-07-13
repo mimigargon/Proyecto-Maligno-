@@ -11,7 +11,7 @@ const getInfo = async () => {
             const password = res.data[0].password;
             console.log("usuario", usuario, "\nPassword: " + password);
             
-            const userArr = usuario;
+            const userArr = [usuario, password];
 
             return userArr;
             

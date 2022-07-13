@@ -15,11 +15,11 @@ const Login =  () => {
   const {username, password} = form;
   const [users, setUsers] = useState([]);
   const [info, setInfo] = useState({});
-  
+  console.log("usuario", username);
 
   const submitLogin = ev => {
     ev.preventDefault();    
-    
+    console.log(form);
   }
 
   const handleInput = ev => setForm({ ...form, [ev.target.name]: ev.target.value })

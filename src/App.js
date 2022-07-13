@@ -11,8 +11,8 @@ import Firewall from "./Components/Game-components/Firewall/Firewall";
 import Drugs from "./Components/Game-components/Drugs/Drugs";
 import About from "./Components/About-us/About";
 import Maligno from "./Components/Maligno/Maligno";
-import "./App.scss";
 import Cryptos from "./Components/Game-components/Cryptos/Cryptos";
+import "./App.scss";
 
 function App() {
   return (

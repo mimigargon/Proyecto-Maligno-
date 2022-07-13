@@ -25,7 +25,6 @@ function Cryptos() {
   const [disabled, setDisabled] = useState(false);
   const [matchesNumber, setMatchesNumber] = useState(0);
 
-  // shuffle cards for new game
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
       .sort(() => Math.random() - 0.5)
@@ -35,15 +34,12 @@ function Cryptos() {
     setChoiceTwo(null);
     setCards(shuffledCards);
     setTurns(0);
-    // setTimeout(() => (finishGame()),35000)
   };
 
-  // handle a choice
   const handleChoice = (card) => {
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
   };
 
-  // compare 2 selected cards
   useEffect(() => {
     if (choiceOne && choiceTwo) {
       setDisabled(true);
@@ -52,7 +48,7 @@ function Cryptos() {
         setCards((prevCards) => {
           return prevCards.map((card) => {
             if (card.src === choiceOne.src) {
-              setMatchesNumber(matchesNumber +1)
+              setMatchesNumber(matchesNumber + 1);
               return { ...card, matched: true };
             } else {
               return card;
@@ -66,40 +62,38 @@ function Cryptos() {
     }
   }, [choiceOne, choiceTwo]);
 
-  // reset choices & increase turn
   const resetTurn = () => {
     setChoiceOne(null);
     setChoiceTwo(null);
     setTurns((prevTurns) => prevTurns + 1);
     setDisabled(false);
-
   };
 
   const finishGame = () => {
     Swal.fire({
       title: "Descifraste parte de las credenciales",
       color: "#f1f1f1d1",
-      confirmButtonColor: '#222',
+      confirmButtonColor: "#222",
       background:
-      'url("https://c.tenor.com/-SV9TjUGabMAAAAC/hacker-python.gif") no-repeat',
+        'url("https://c.tenor.com/-SV9TjUGabMAAAAC/hacker-python.gif") no-repeat',
     }).then((result) => {
-      if(result.isConfirmed) {
+      if (result.isConfirmed) {
         const cb = () => navigate("/main");
-        dispatch(storeCryptosPass(cb))
+        dispatch(storeCryptosPass(cb));
         console.log("confirmado");
       }
-    })
+    });
   };
-  // start new game auto
+
   useEffect(() => {
     shuffleCards();
   }, []);
 
-  useEffect( () => {
-    if(matchesNumber === 6){
+  useEffect(() => {
+    if (matchesNumber === 6) {
       finishGame();
     }
-  }, [matchesNumber])
+  }, [matchesNumber]);
 
   return (
     <div className="cryptos-container">

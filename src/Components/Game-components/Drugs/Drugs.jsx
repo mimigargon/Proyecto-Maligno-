@@ -17,7 +17,6 @@ const Drugs = () => {
       try {
         const res = await axios("https://cima.aemps.es/cima/rest/psuministro");
         console.log(res);
-        // const {info, results} = await res.json(); //  Fetch
         const { info, resultados } = res.data;
         setDrugs(resultados);
         setInfo(info);
@@ -27,7 +26,7 @@ const Drugs = () => {
     };
 
     getDrugs();
-  }, []); // [] quiere decir que solo se ejecuta una vez
+  }, []);
 
   const mystyle = {
     margin: 0,
@@ -48,8 +47,8 @@ const Drugs = () => {
         'url("https://c.tenor.com/-SV9TjUGabMAAAAC/hacker-python.gif") no-repeat',
     }).then((result) => {
       if (result.isConfirmed) {
-       const cb = () => navigate("/main");
-        dispatch(storeDrugsPass(cb))
+        const cb = () => navigate("/main");
+        dispatch(storeDrugsPass(cb));
         console.log("confirmado");
       }
     });
@@ -152,7 +151,6 @@ const Drugs = () => {
             </div>
             <div class="returnPolicy">
               <div class="detail">{Date()}</div>
-            
             </div>
             <div class="tripSummary">
               <div class="bold">Trip Summary:</div>
