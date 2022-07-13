@@ -56,7 +56,7 @@ const Main = () => {
   <div className="top">
  
   </div>
-  <div className="paper" contenteditable="true">
+  <div className="paper" contentEditable="true">
   <p>Aquí se guardará la contraseña a medida que vayas desencriptando las pistas en cada página web.</p>
   <span><b>Password: </b></span>
   {passObj.weapon && <span><b>{passObj.weapon}</b></span>}
