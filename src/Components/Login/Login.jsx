@@ -1,50 +1,37 @@
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import getInfo from "../../redux/login";
+import { loginFormSubmit, loginFormChange } from "../../redux/auth/auth.actions";
+import "./Login.scss";
 
-
-
-const Login =  () => {
-
+const Login = () => {
   const navigate = useNavigate();
-  
-  const usuario = getInfo();
-  console.log("userArr", usuario);
+  const dispatch = useDispatch();
+  const loginForm = useSelector((state) => state.auth.loginForm);
 
-  const [form, setForm] = useState({username: '', password: ''});
-  const {username, password} = form;
-  const [users, setUsers] = useState([]);
-  const [info, setInfo] = useState({});
-  console.log("usuario", username);
-
-  const submitLogin = ev => {
-    ev.preventDefault();    
-    console.log(form);
+  const submitLogin = (ev) => {
+    ev.preventDefault();
+    const callback = () => navigate('/maligno');
+    dispatch(loginFormSubmit(callback));
   }
-
-  const handleInput = ev => setForm({ ...form, [ev.target.name]: ev.target.value })
-
-
   return (
-    <form onSubmit={submitLogin}>
+    <div className="login-container">
+      <p>LOGIN</p>
+      <form onSubmit={submitLogin}>
+        <label>
+          <span>USERNAME</span>
+          <input type="text" name="username" value={loginForm.username} onChange={(ev) => dispatch(loginFormChange(ev))}></input>
+        </label>
+        <label>
+          <span>PASSWORD</span>
+          <input type="password" name="password" value={loginForm.password} onChange={(ev) => dispatch(loginFormChange(ev))}></input>
+        </label>
+        <button type="submit" className="submit-btn">
+          ACCEDER
+        </button>
+      </form>
+    </div>
+  );
+};
 
-      <label>
-        <p>user</p>
-        <input name="username" type="text" value={form.username} onChange={handleInput} />
-      </label>
-
-      <label>
-        <p>Contraseña</p>
-        <input name="password" type="password" value={form.password} onChange={handleInput} />
-      </label>
-      
-      <div>
-        <button type="submit">Acceder</button>
-      </div>
-
-    </form>
-  )
-  
-}
-
-export default Login
+export default Login;
