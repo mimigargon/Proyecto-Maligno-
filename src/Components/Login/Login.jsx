@@ -16,7 +16,7 @@ const Login = () => {
   }
   return (
     <div className="login-container">
-      <p>LOGIN</p>
+      <p className="login-title">LOGIN</p>
       <form onSubmit={submitLogin}>
         <label>
           <span>USERNAME</span>
@@ -30,6 +30,10 @@ const Login = () => {
           ACCEDER
         </button>
       </form>
+
+      <div className="login-statement">
+        <p>Debes loguearte como 4RCH4N63L para conseguir destruirle.</p>
+      </div>
     </div>
   );
 };

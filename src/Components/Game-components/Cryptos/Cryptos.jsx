@@ -101,6 +101,7 @@ function Cryptos() {
       <div className="cryptos-description">
         Debes acertar todas las parejas de estas criptomonedas.
       </div>
+      <p className="crypto-turns">Turns: {turns}</p>
       <div className="card-grid">
         {cards.map((card) => (
           <Card
@@ -113,7 +114,6 @@ function Cryptos() {
         ))}
       </div>
 
-      <p>Turns: {turns}</p>
     </div>
   );
 }
