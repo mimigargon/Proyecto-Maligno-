@@ -32,22 +32,22 @@ const Main = () => {
       <div className="rowContainer">
       <div className="main-links">
         <Link to={"/stolen"}>
-          <p>https://stolenobjects.com</p>
+          <p>https://st0l3n0bj3ct5.com/</p>
         </Link>
         <Link to={"/drugs"}>
-          <p>https://buysomedrugs.com</p>
+          <p>https://buys0m3drug5.com/</p>
         </Link>
         <Link to={"/weapons"}>
-          <p>https://warandweapons.com</p>
+          <p>https://w4r4ndw3ap0ns.com/</p>
         </Link>
         <Link to={"/firewall"}>
-          <p>https:/overpassthefirewall.com</p>
+          <p>https://0v3rp4ssth4f1rew4ll.com/</p>
         </Link>
         <Link to={"/fake-news"}>
-          <p>https://veryrealnews.com</p>
+          <p>https://v3ryr3aln3w5.com/</p>
         </Link>
         <Link to={"/cryptos"}>
-          <p>https://winwinsomecryptos.com</p>
+          <p>https://w1nw1ns0m3crypt0s.com/</p>
         </Link>
       </div>
       <div className="main-notebook">
