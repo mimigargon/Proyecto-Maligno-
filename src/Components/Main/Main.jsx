@@ -12,8 +12,8 @@ let blackBackground = [
 
 let whiteBackground = [
   "font-size: 50px",
-  "background: rgb(131,58,180);",
-  "background: linear-gradient(90deg, rgba(131,58,180,1) 44%, rgba(253,29,29,1) 70%, rgba(252,176,69,1) 100%);",
+  "background: rgb(34,193,195);",
+  "background: linear-gradient(0deg, rgba(34,193,195,1) 16%, rgba(193,42,162,0.23012955182072825) 44%);",
 ].join(" ;");
 
 console.log(
